@@ -12,9 +12,11 @@
 		8652329421A8570700F9D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Main.storyboard */; };
 		8652329621A8570900F9D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8652329521A8570900F9D73A /* Assets.xcassets */; };
 		8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329721A8570900F9D73A /* LaunchScreen.storyboard */; };
+		D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		8652328B21A8570700F9D73A /* K Group Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K Group Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8652328E21A8570700F9D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8652329021A8570700F9D73A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		8652329521A8570900F9D73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8652329821A8570900F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8652329A21A8570900F9D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_Group_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EEC43D4563EAB0BFE937A2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8652328221A8570700F9D73A = {
 			isa = PBXGroup;
 			children = (
 				8652328D21A8570700F9D73A /* K Group Challenge */,
 				8652328C21A8570700F9D73A /* Products */,
+				FD0F37A16E0258B708616FFC /* Pods */,
+				02EEC43D4563EAB0BFE937A2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = "K Group Challenge";
 			sourceTree = "<group>";
 		};
+		FD0F37A16E0258B708616FFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */,
+				6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +95,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8652329D21A8570900F9D73A /* Build configuration list for PBXNativeTarget "K Group Challenge" */;
 			buildPhases = (
+				C06BF6B5EB8D63165FEB77A4 /* [CP] Check Pods Manifest.lock */,
 				8652328721A8570700F9D73A /* Sources */,
 				8652328821A8570700F9D73A /* Frameworks */,
 				8652328921A8570700F9D73A /* Resources */,
@@ -129,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C06BF6B5EB8D63165FEB77A4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-K Group Challenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8652328721A8570700F9D73A /* Sources */ = {
@@ -280,6 +330,7 @@
 		};
 		8652329E21A8570900F9D73A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +348,7 @@
 		};
 		8652329F21A8570900F9D73A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
