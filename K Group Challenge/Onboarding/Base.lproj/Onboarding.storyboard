@@ -12,8 +12,9 @@
         <!--Navigation Controller-->
         <scene sceneID="282-lq-zcn">
             <objects>
-                <navigationController navigationBarHidden="YES" id="5KT-GU-EsO" sceneMemberID="viewController">
+                <navigationController id="5KT-GU-EsO" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="z9b-zs-z1O">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -44,13 +45,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are using HealthKit to compute the diet, that will be a best fit for your lifestyle " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rh-WP-8nx">
-                                <rect key="frame" x="60" y="52" width="255" height="191.5"/>
+                                <rect key="frame" x="60" y="96" width="255" height="169.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health-kit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-mk-gzl">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="265.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Lni-IQ-ida"/>
                                     <constraint firstAttribute="width" constant="200" id="u3u-tG-Az4"/>
@@ -102,31 +103,31 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your charasteristics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-sF-BXo">
-                                <rect key="frame" x="16" y="44" width="343" height="31.5"/>
+                                <rect key="frame" x="16" y="88" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-Da-OFm">
-                                <rect key="frame" x="16" y="91.5" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="135.5" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Loss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-5B-zDk">
-                                <rect key="frame" x="16" y="164.5" width="343" height="31.5"/>
+                                <rect key="frame" x="16" y="208.5" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best diet for you is:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-Bd-FrG">
-                                <rect key="frame" x="16" y="128" width="343" height="20.5"/>
+                                <rect key="frame" x="16" y="172" width="343" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="healthy-people" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-jl-fOM">
-                                <rect key="frame" x="37.5" y="216" width="300" height="341"/>
+                                <rect key="frame" x="37.5" y="260" width="300" height="297"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="D7K-lN-aFz"/>
                                 </constraints>
@@ -172,7 +173,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kesko-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rST-IA-NcV">
-                                <rect key="frame" x="87.5" y="243.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="265.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GKK-gV-7RJ"/>
                                     <constraint firstAttribute="height" constant="200" id="sbq-E2-GRe"/>
@@ -190,7 +191,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know your Kesko information to better understand your food preferences " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNN-dj-ies">
-                                <rect key="frame" x="60" y="52" width="255" height="191.5"/>
+                                <rect key="frame" x="60" y="96" width="255" height="169.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
