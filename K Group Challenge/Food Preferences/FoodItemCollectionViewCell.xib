@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FoodItemCollectionViewCell" customModule="K_Group_Challenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="249" height="426"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="249" height="426"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Love/Hate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="392-ki-Qfd">
+                        <rect key="frame" x="20" y="385" width="209" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomato" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G9U-iT-O7n">
+                        <rect key="frame" x="20" y="20" width="209" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" verticalHuggingPriority="500" verticalCompressionResistancePriority="700" translatesAutoresizingMaskIntoConstraints="NO" id="oZE-Q5-6fZ" customClass="SectionedSlider" customModule="K_Group_Challenge" customModuleProvider="target">
+                        <rect key="frame" x="64.5" y="115" width="120" height="262"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="q3Y-rM-drC"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="sections">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="selectedSection">
+                                <integer key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="viewBackgroundColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="sliderBackgroundColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="sliderColor">
+                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🥧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4n-I2-NbU">
+                        <rect key="frame" x="20" y="45" width="209" height="66"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="O4n-I2-NbU" secondAttribute="trailing" constant="20" id="2B3-SX-lSl"/>
+                <constraint firstItem="oZE-Q5-6fZ" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="4Ud-YY-wBb"/>
+                <constraint firstItem="392-ki-Qfd" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="7KK-8d-PJJ"/>
+                <constraint firstItem="392-ki-Qfd" firstAttribute="top" secondItem="oZE-Q5-6fZ" secondAttribute="bottom" constant="8" id="D2k-NS-jIY"/>
+                <constraint firstItem="oZE-Q5-6fZ" firstAttribute="top" secondItem="O4n-I2-NbU" secondAttribute="bottom" constant="4" id="Emb-hq-ye3"/>
+                <constraint firstItem="G9U-iT-O7n" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" priority="999" constant="20" id="PkW-vq-dif"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="392-ki-Qfd" secondAttribute="trailing" constant="20" id="aJm-uc-p51"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="G9U-iT-O7n" secondAttribute="trailing" constant="20" id="cim-Fp-Va7"/>
+                <constraint firstItem="O4n-I2-NbU" firstAttribute="top" secondItem="G9U-iT-O7n" secondAttribute="bottom" constant="4" id="cnd-ME-zzm"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="392-ki-Qfd" secondAttribute="bottom" priority="999" constant="20" id="jwG-ug-3wK"/>
+                <constraint firstItem="O4n-I2-NbU" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="oH9-Uo-ghk"/>
+                <constraint firstItem="392-ki-Qfd" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="uzk-mu-8dm"/>
+                <constraint firstItem="G9U-iT-O7n" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="20" id="xu9-tV-Ey6"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="249" height="426"/>
+            <connections>
+                <outlet property="itemEmoji" destination="O4n-I2-NbU" id="k1Z-vS-30i"/>
+                <outlet property="itemNameLabel" destination="G9U-iT-O7n" id="SxY-es-lai"/>
+                <outlet property="slider" destination="oZE-Q5-6fZ" id="uZG-jQ-HQU"/>
+                <outlet property="stateLabel" destination="392-ki-Qfd" id="AKM-Ka-F3h"/>
+            </connections>
+            <point key="canvasLocation" x="295.19999999999999" y="241.97901049475263"/>
+        </collectionViewCell>
+    </objects>
+</document>
