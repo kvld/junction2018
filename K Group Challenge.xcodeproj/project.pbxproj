@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		860AFD2521A974F500F7D84C /* Recipes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 860AFD2421A974F500F7D84C /* Recipes.storyboard */; };
 		8635EC9121A951D400918B42 /* Diets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8635EC9021A951D400918B42 /* Diets.storyboard */; };
 		8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635EC9221A9550E00918B42 /* DietsListViewController.swift */; };
 		8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652328E21A8570700F9D73A /* AppDelegate.swift */; };
@@ -18,11 +19,15 @@
 		868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868251B721A9565A00AE8E82 /* DietTableViewCell.xib */; };
 		868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BC21A961DE00AE8E82 /* DietViewModel.swift */; };
 		868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BE21A9698100AE8E82 /* ImageCarouselView.swift */; };
+		86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */; };
+		86F0685521A9858D00E99ADE /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */; };
+		86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685621A985BC00E99ADE /* RecipesViewController.swift */; };
 		D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		860AFD2421A974F500F7D84C /* Recipes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Recipes.storyboard; sourceTree = "<group>"; };
 		8635EC9021A951D400918B42 /* Diets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diets.storyboard; sourceTree = "<group>"; };
 		8635EC9221A9550E00918B42 /* DietsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietsListViewController.swift; sourceTree = "<group>"; };
 		8652328B21A8570700F9D73A /* K Group Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K Group Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +41,9 @@
 		868251B721A9565A00AE8E82 /* DietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietTableViewCell.xib; sourceTree = "<group>"; };
 		868251BC21A961DE00AE8E82 /* DietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewModel.swift; sourceTree = "<group>"; };
 		868251BE21A9698100AE8E82 /* ImageCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
+		86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
+		86F0685621A985BC00E99ADE /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
 		8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_Group_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +66,16 @@
 				8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		860AFD2321A974EB00F7D84C /* Recipes */ = {
+			isa = PBXGroup;
+			children = (
+				86F0685121A9857400E99ADE /* Cell */,
+				860AFD2421A974F500F7D84C /* Recipes.storyboard */,
+				86F0685621A985BC00E99ADE /* RecipesViewController.swift */,
+			);
+			path = Recipes;
 			sourceTree = "<group>";
 		};
 		8635EC8F21A9414D00918B42 /* Diets */ = {
@@ -91,6 +109,7 @@
 		8652328D21A8570700F9D73A /* K Group Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				860AFD2321A974EB00F7D84C /* Recipes */,
 				8635EC8F21A9414D00918B42 /* Diets */,
 				8652328E21A8570700F9D73A /* AppDelegate.swift */,
 				8652329021A8570700F9D73A /* ViewController.swift */,
@@ -109,6 +128,15 @@
 				868251BE21A9698100AE8E82 /* ImageCarouselView.swift */,
 				868251B721A9565A00AE8E82 /* DietTableViewCell.xib */,
 				868251BC21A961DE00AE8E82 /* DietViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		86F0685121A9857400E99ADE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */,
+				86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -133,6 +161,7 @@
 				8652328721A8570700F9D73A /* Sources */,
 				8652328821A8570700F9D73A /* Frameworks */,
 				8652328921A8570700F9D73A /* Resources */,
+				485FED4778B90DB27A045BFF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,9 +211,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8635EC9121A951D400918B42 /* Diets.storyboard in Resources */,
+				86F0685521A9858D00E99ADE /* RecipeCollectionViewCell.xib in Resources */,
 				8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */,
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
 				8652329421A8570700F9D73A /* Main.storyboard in Resources */,
+				860AFD2521A974F500F7D84C /* Recipes.storyboard in Resources */,
 				868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +223,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		485FED4778B90DB27A045BFF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenteredCollectionView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C06BF6B5EB8D63165FEB77A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,10 +274,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */,
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
 				868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */,
 				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
+				86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
 			);
