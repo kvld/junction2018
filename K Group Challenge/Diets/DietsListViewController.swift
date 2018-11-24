@@ -64,7 +64,7 @@ final class DietsListViewController: UIViewController {
 
 extension DietsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModels.count
+        return self.viewModels.count
     }
 
     func tableView(

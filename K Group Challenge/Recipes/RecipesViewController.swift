@@ -19,11 +19,44 @@ final class RecipesViewController: UIViewController {
 
     private let daysTitles = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
+    private var viewModels: [RecipeViewModel] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupCollectionView()
         self.setupDaysSwitch()
+
+        // Mock
+        self.viewModels = [
+            RecipeViewModel(
+                image: UIImage(named: "recipe1")!,
+                title: "Recipe title 1",
+                summary: "Summary summary summary summary",
+                calories: "1000\nkcal",
+                carbohydrates: "32.1\ncarbohydrates",
+                fats: "7.1\nfats",
+                proteins: "16.7\nproteins"
+            ),
+            RecipeViewModel(
+                image: UIImage(named: "recipe2")!,
+                title: "Recipe title 2",
+                summary: "Summary summary summary summary",
+                calories: "1000\nkcal",
+                carbohydrates: "32.1\ncarbohydrates",
+                fats: "7.1\nfats",
+                proteins: "16.7\nproteins"
+            ),
+            RecipeViewModel(
+                image: UIImage(named: "recipe3")!,
+                title: "Recipe title",
+                summary: "Summary summary summary summary",
+                calories: "1000\nkcal",
+                carbohydrates: "32.1\ncarbohydrates",
+                fats: "7.1\nfats",
+                proteins: "16.7\nproteins"
+            )
+        ]
     }
 
     private func setupCollectionView() {
@@ -76,7 +109,7 @@ extension RecipesViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return 6
+        return self.viewModels.count
     }
 
     func collectionView(
@@ -87,6 +120,8 @@ extension RecipesViewController: UICollectionViewDataSource {
             withReuseIdentifier: RecipeCollectionViewCell.reuseID,
             for: indexPath
         ) as! RecipeCollectionViewCell
+        let viewModel = self.viewModels[indexPath.row]
+        cell.configure(with: viewModel)
         return cell
     }
 }

@@ -22,6 +22,7 @@
 		86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */; };
 		86F0685521A9858D00E99ADE /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */; };
 		86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685621A985BC00E99ADE /* RecipesViewController.swift */; };
+		86F0685921A994ED00E99ADE /* RecipeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685821A994ED00E99ADE /* RecipeViewModel.swift */; };
 		D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		86F0685621A985BC00E99ADE /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
+		86F0685821A994ED00E99ADE /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
 		8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_Group_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 				86F0685121A9857400E99ADE /* Cell */,
 				860AFD2421A974F500F7D84C /* Recipes.storyboard */,
 				86F0685621A985BC00E99ADE /* RecipesViewController.swift */,
+				86F0685821A994ED00E99ADE /* RecipeViewModel.swift */,
 			);
 			path = Recipes;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */,
+				86F0685921A994ED00E99ADE /* RecipeViewModel.swift in Sources */,
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
 				868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */,
 				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
