@@ -22,6 +22,13 @@ final class ImageCarouselView: UIView {
         return scrollView
     }()
 
+    private lazy var pageControl: UIPageControl = {
+        let pageControl = UIPageControl()
+        pageControl.pageIndicatorTintColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.4)
+        pageControl.currentPageIndicatorTintColor = UIColor(red: 155.0/255, green: 143.0/255, blue: 246.0/255, alpha: 1.0)
+        return pageControl
+    }()
+    
     var currentImageIndex: Int {
         if self.scrollView.bounds.size.width == 0 {
             return 0
@@ -63,15 +70,26 @@ final class ImageCarouselView: UIView {
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         constrainToEdges(view: scrollView, targetView: self)
-
+        scrollView.layer.cornerRadius = 4.0
+        scrollView.clipsToBounds = true
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         constrainToEdges(view: stackView, targetView: scrollView)
         stackView.heightAnchor.constraint(
             equalTo: scrollView.heightAnchor
         ).isActive = true
+    
+        addSubview(pageControl)
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
+        pageControl.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        
+        scrollView.delegate = self
     }
 
     func set(images: [UIImage]) {
+        pageControl.numberOfPages = images.count
+        pageControl.currentPage = 0
         for image in images {
             let imageView = UIImageView()
             stackView.addArrangedSubview(imageView)
@@ -86,5 +104,11 @@ final class ImageCarouselView: UIView {
             imageView.image = image
             imageView.contentMode = .scaleAspectFill
         }
+    }
+}
+
+extension ImageCarouselView: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        pageControl.currentPage = currentImageIndex
     }
 }

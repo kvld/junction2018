@@ -44,28 +44,28 @@ final class DietsListViewController: UIViewController {
         self.viewModels = [
             DietViewModel(
                 images: [UIImage(named: "recipe1")!, UIImage(named: "recipe2")!],
-                ingredients: [
-                    .init(title: "Milk", quantity: "100 ml"),
-                    .init(title: "Apple", quantity: "1 pcs")
-                ],
+//                ingredients: [
+//                    .init(title: "Milk", quantity: "100 ml"),
+//                    .init(title: "Apple", quantity: "1 pcs")
+//                ],
                 calories: "228 kcal",
                 price: "$100"
             ),
             DietViewModel(
                 images: [UIImage(named: "recipe2")!, UIImage(named: "recipe1")!],
-                ingredients: [
-                    .init(title: "Milk", quantity: "100 ml"),
-                    .init(title: "Apple", quantity: "1 pcs")
-                ],
+//                ingredients: [
+//                    .init(title: "Milk", quantity: "100 ml"),
+//                    .init(title: "Apple", quantity: "1 pcs")
+//                ],
                 calories: "1000 kcal",
                 price: "$200"
             ),
             DietViewModel(
                 images: [UIImage(named: "recipe3")!, UIImage(named: "recipe2")!],
-                ingredients: [
-                    .init(title: "Milk", quantity: "100 ml"),
-                    .init(title: "Apple", quantity: "1 pcs")
-                ],
+//                ingredients: [
+//                    .init(title: "Milk", quantity: "100 ml"),
+//                    .init(title: "Apple", quantity: "1 pcs")
+//                ],
                 calories: "1000 kcal",
                 price: "$300"
             )
