@@ -19,9 +19,6 @@ final class DietTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-
-        self.containerView.clipsToBounds = true
-        self.containerView.layer.cornerRadius = 10
     }
 
     func configure(with viewModel: DietViewModel) {

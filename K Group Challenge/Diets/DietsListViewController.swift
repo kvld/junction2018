@@ -9,6 +9,7 @@
 import UIKit
 
 final class DietsListViewController: UIViewController {
+    @IBOutlet private weak var headerLabel: UILabel!
     @IBOutlet private weak var tableView: UITableView!
 
     private var viewModels: [DietViewModel] = []
