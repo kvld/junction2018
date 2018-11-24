@@ -127,5 +127,17 @@ extension RecipesViewController: UICollectionViewDataSource {
 }
 
 extension RecipesViewController: UICollectionViewDelegate {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        didSelectItemAt indexPath: IndexPath
+    ) {
+        let viewModel = self.viewModels[indexPath.row]
 
+        let storyboard = UIStoryboard(name: "Recipes", bundle: nil)
+        let vc = storyboard.instantiateViewController(
+            withIdentifier: "DetailRecipeViewController"
+        ) as! DetailRecipeViewController
+        vc.configure(with: viewModel)
+        present(vc, animated: true, completion: nil)
+    }
 }
