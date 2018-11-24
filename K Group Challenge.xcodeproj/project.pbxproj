@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		081CAD7E21A93DFE0029F52F /* HealthKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */; };
+		081CAD8121A96A070029F52F /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */; };
+		081CAD8321A96A150029F52F /* KeskoConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */; };
 		8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652328E21A8570700F9D73A /* AppDelegate.swift */; };
 		8652329121A8570700F9D73A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652329021A8570700F9D73A /* ViewController.swift */; };
-		8652329421A8570700F9D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Main.storyboard */; };
+		8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Onboarding.storyboard */; };
 		8652329621A8570900F9D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8652329521A8570900F9D73A /* Assets.xcassets */; };
 		8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329721A8570900F9D73A /* LaunchScreen.storyboard */; };
 		D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewController.swift; sourceTree = "<group>"; };
+		081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
+		081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeskoConnectViewController.swift; sourceTree = "<group>"; };
 		6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		8652328B21A8570700F9D73A /* K Group Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K Group Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8652328E21A8570700F9D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8652329021A8570700F9D73A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8652329321A8570700F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8652329321A8570700F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		8652329521A8570900F9D73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8652329821A8570900F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8652329A21A8570900F9D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -48,6 +54,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		081CAD7F21A969E50029F52F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */,
+				081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */,
+				081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		8652328221A8570700F9D73A = {
 			isa = PBXGroup;
 			children = (
@@ -69,9 +85,10 @@
 		8652328D21A8570700F9D73A /* K Group Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				081CAD7F21A969E50029F52F /* Onboarding */,
 				8652328E21A8570700F9D73A /* AppDelegate.swift */,
 				8652329021A8570700F9D73A /* ViewController.swift */,
-				8652329221A8570700F9D73A /* Main.storyboard */,
+				8652329221A8570700F9D73A /* Onboarding.storyboard */,
 				8652329521A8570900F9D73A /* Assets.xcassets */,
 				8652329721A8570900F9D73A /* LaunchScreen.storyboard */,
 				8652329A21A8570900F9D73A /* Info.plist */,
@@ -149,7 +166,7 @@
 			files = (
 				8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */,
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
-				8652329421A8570700F9D73A /* Main.storyboard in Resources */,
+				8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,19 +203,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
+				081CAD8121A96A070029F52F /* CharacteristicsViewController.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
+				081CAD8321A96A150029F52F /* KeskoConnectViewController.swift in Sources */,
+				081CAD7E21A93DFE0029F52F /* HealthKitViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8652329221A8570700F9D73A /* Main.storyboard */ = {
+		8652329221A8570700F9D73A /* Onboarding.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8652329321A8570700F9D73A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Onboarding.storyboard;
 			sourceTree = "<group>";
 		};
 		8652329721A8570900F9D73A /* LaunchScreen.storyboard */ = {
@@ -334,7 +354,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC856P4H5V;
 				INFOPLIST_FILE = "K Group Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BC856P4H5V;
 				INFOPLIST_FILE = "K Group Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
