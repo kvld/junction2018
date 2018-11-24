@@ -170,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				860AFD2321A974EB00F7D84C /* Recipes */,
-				8635EC8F21A9414D00918B42 /* Diets */,
 				082D4D8221A97004003890D5 /* Food Preferences */,
 				081CAD7F21A969E50029F52F /* Onboarding */,
 				8635EC8F21A9414D00918B42 /* Diets */,

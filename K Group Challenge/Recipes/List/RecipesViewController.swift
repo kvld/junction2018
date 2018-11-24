@@ -138,6 +138,7 @@ extension RecipesViewController: UICollectionViewDelegate {
             withIdentifier: "DetailRecipeViewController"
         ) as! DetailRecipeViewController
         vc.configure(with: viewModel)
-        present(vc, animated: true, completion: nil)
+
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
