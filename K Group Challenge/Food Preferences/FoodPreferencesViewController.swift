@@ -65,6 +65,12 @@ class FoodPreferencesViewController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
+        UIApplication.shared.statusBarStyle = .default
+    }
 }
 
 extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionViewDataSource {

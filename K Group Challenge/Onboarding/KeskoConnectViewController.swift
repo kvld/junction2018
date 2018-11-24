@@ -10,7 +10,11 @@ import UIKit
 
 class KeskoConnectViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
-    
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .default
+    }
+
     @IBAction func buttonPressed(_ sender: Any) {
         showNext()
     }

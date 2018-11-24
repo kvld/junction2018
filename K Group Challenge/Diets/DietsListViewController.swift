@@ -14,6 +14,18 @@ final class DietsListViewController: UIViewController {
 
     private var viewModels: [DietViewModel] = []
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Diets"
+
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

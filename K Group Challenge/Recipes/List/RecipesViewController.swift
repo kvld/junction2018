@@ -21,6 +21,13 @@ final class RecipesViewController: UIViewController {
 
     private var viewModels: [RecipeViewModel] = []
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.title = "Menu"
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

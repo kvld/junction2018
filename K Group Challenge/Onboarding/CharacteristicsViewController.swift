@@ -10,7 +10,6 @@ import UIKit
 
 class CharacteristicsViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
-    
     @IBOutlet var kcalLabel: UILabel!
 
     override func viewDidLoad() {
