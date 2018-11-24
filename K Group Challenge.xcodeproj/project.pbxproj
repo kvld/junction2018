@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8635EC9121A951D400918B42 /* Diets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8635EC9021A951D400918B42 /* Diets.storyboard */; };
+		8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635EC9221A9550E00918B42 /* DietsListViewController.swift */; };
 		8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652328E21A8570700F9D73A /* AppDelegate.swift */; };
 		8652329121A8570700F9D73A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652329021A8570700F9D73A /* ViewController.swift */; };
 		8652329421A8570700F9D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Main.storyboard */; };
 		8652329621A8570900F9D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8652329521A8570900F9D73A /* Assets.xcassets */; };
 		8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329721A8570900F9D73A /* LaunchScreen.storyboard */; };
+		868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251B621A9565A00AE8E82 /* DietTableViewCell.swift */; };
+		868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868251B721A9565A00AE8E82 /* DietTableViewCell.xib */; };
+		868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BC21A961DE00AE8E82 /* DietViewModel.swift */; };
+		868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BE21A9698100AE8E82 /* ImageCarouselView.swift */; };
 		D9F605459420249847000E37 /* Pods_K_Group_Challenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.release.xcconfig"; sourceTree = "<group>"; };
+		8635EC9021A951D400918B42 /* Diets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diets.storyboard; sourceTree = "<group>"; };
+		8635EC9221A9550E00918B42 /* DietsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietsListViewController.swift; sourceTree = "<group>"; };
 		8652328B21A8570700F9D73A /* K Group Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K Group Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8652328E21A8570700F9D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8652329021A8570700F9D73A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +32,10 @@
 		8652329521A8570900F9D73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8652329821A8570900F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8652329A21A8570900F9D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		868251B621A9565A00AE8E82 /* DietTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietTableViewCell.swift; sourceTree = "<group>"; };
+		868251B721A9565A00AE8E82 /* DietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietTableViewCell.xib; sourceTree = "<group>"; };
+		868251BC21A961DE00AE8E82 /* DietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewModel.swift; sourceTree = "<group>"; };
+		868251BE21A9698100AE8E82 /* ImageCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
 		8CD59F807C04563EB057824A /* Pods_K_Group_Challenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_K_Group_Challenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		982DADE304E549A20521ABA6 /* Pods-K Group Challenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,6 +60,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8635EC8F21A9414D00918B42 /* Diets */ = {
+			isa = PBXGroup;
+			children = (
+				868251B521A9564500AE8E82 /* Cell */,
+				8635EC9021A951D400918B42 /* Diets.storyboard */,
+				8635EC9221A9550E00918B42 /* DietsListViewController.swift */,
+			);
+			path = Diets;
+			sourceTree = "<group>";
+		};
 		8652328221A8570700F9D73A = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +91,7 @@
 		8652328D21A8570700F9D73A /* K Group Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				8635EC8F21A9414D00918B42 /* Diets */,
 				8652328E21A8570700F9D73A /* AppDelegate.swift */,
 				8652329021A8570700F9D73A /* ViewController.swift */,
 				8652329221A8570700F9D73A /* Main.storyboard */,
@@ -77,6 +100,17 @@
 				8652329A21A8570900F9D73A /* Info.plist */,
 			);
 			path = "K Group Challenge";
+			sourceTree = "<group>";
+		};
+		868251B521A9564500AE8E82 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				868251B621A9565A00AE8E82 /* DietTableViewCell.swift */,
+				868251BE21A9698100AE8E82 /* ImageCarouselView.swift */,
+				868251B721A9565A00AE8E82 /* DietTableViewCell.xib */,
+				868251BC21A961DE00AE8E82 /* DietViewModel.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		FD0F37A16E0258B708616FFC /* Pods */ = {
@@ -147,9 +181,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8635EC9121A951D400918B42 /* Diets.storyboard in Resources */,
 				8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */,
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
 				8652329421A8570700F9D73A /* Main.storyboard in Resources */,
+				868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +221,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
+				868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */,
+				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
+				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +374,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "K Group Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,7 +394,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "K Group Challenge/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
