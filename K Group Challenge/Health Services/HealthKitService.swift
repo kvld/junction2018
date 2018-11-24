@@ -11,15 +11,27 @@ import HealthKit
 
 struct HealthKitStaticData {
     let age: Int
-    let gender: HKBiologicalSex
+    let gender: Sex
 }
 
-extension HKBiologicalSex {
+enum Sex {
+    case female, male, other
+
     var stringRepresentation: String {
         switch self {
         case .female: return "Female"
         case .male: return "Male"
-        case .notSet, .other: return "Other"
+        case .other: return "Other"
+        }
+    }
+}
+
+extension HKBiologicalSex {
+    var commonSex: Sex {
+        switch self {
+        case .female: return .female
+        case .male: return .male
+        case .notSet, .other: return .other
         }
     }
 }
@@ -49,6 +61,7 @@ class HealthKitService {
             let bodyMass = HKObjectType.quantityType(forIdentifier: .bodyMass),
             let fatPercentage = HKObjectType.quantityType(forIdentifier: .bodyFatPercentage),
             let activity = HKObjectType.quantityType(forIdentifier: .appleExerciseTime),
+            let basalEnergy = HKObjectType.quantityType(forIdentifier: .basalEnergyBurned),
             let activeEnergy = HKObjectType.quantityType(forIdentifier: .activeEnergyBurned) else {
 
                 completion(false, HealthKitServiceError.dataTypeNotAvailable)
@@ -68,6 +81,7 @@ class HealthKitService {
                                                        bodyMass,
                                                        activity,
                                                        activeEnergy,
+                                                       basalEnergy,
                                                        HKObjectType.workoutType()]
         //4. Request Authorization
         store.requestAuthorization(toShare: [],
@@ -93,7 +107,7 @@ class HealthKitService {
                 let age = thisYear - birthdayComponents.year!
 
                 //3. Unwrap the wrappers to get the underlying enum values.
-                let unwrappedBiologicalSex = biologicalSex.biologicalSex
+                let unwrappedBiologicalSex = biologicalSex.biologicalSex.commonSex
 
 
                 return HealthKitStaticData(age: age, gender: unwrappedBiologicalSex)
@@ -151,7 +165,89 @@ class HealthKitService {
         }
     }
 
+    /// Return Kilocalories for resting energy
+    ///
+    func getRestingEnergy(completion: @escaping(Double?, Error?) -> ()) {
+        guard let restingEnergySampleType = HKSampleType.quantityType(forIdentifier: .basalEnergyBurned) else {
+            print("Resting Sample Type is no longer available in HealthKit")
+            return
+        }
 
+
+        getStatisticsMonth(for: restingEnergySampleType) { (statistics, numberOfDays, error) in
+            guard let statistics = statistics else {
+                if let error = error {
+                    completion(nil, error)
+                }
+                return
+            }
+
+            if let sum = statistics.sumQuantity()?
+                .doubleValue(for: HKUnit.kilocalorie()) {
+                let average = sum / Double(numberOfDays)
+                completion(average, error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    /// Return Kilocalories for resting energy
+    ///
+    func getActiveEnergy(completion: @escaping(Double?, Error?) -> ()) {
+        guard let activeEnergySampleType = HKSampleType.quantityType(forIdentifier: .activeEnergyBurned) else {
+            print("Mass Sample Type is no longer available in HealthKit")
+            return
+        }
+
+        getStatisticsMonth(for: activeEnergySampleType) { (statistics, numberOfDays, error) in
+            guard let statistics = statistics else {
+                if let error = error {
+                    completion(nil, error)
+                }
+                return
+            }
+
+            if let sum = statistics.sumQuantity()?
+                .doubleValue(for: HKUnit.kilocalorie()) {
+                let average = sum / Double(numberOfDays)
+                completion(average, error)
+            } else {
+                completion(nil, error)
+            }
+        }
+    }
+
+    private func numberOfDays(from: Date, to: Date) -> Int? {
+        let calendar = Calendar.current
+
+        let components = calendar.dateComponents([.day], from: from, to: to)
+        return components.day
+    }
+
+    private func getStatisticsMonth(for sampleType: HKQuantityType, completion: @escaping (HKStatistics?, Int, Error?) -> Void) {
+        let now = Date()
+        let monthAgo = Calendar.current.date(byAdding: .month, value: -1, to: now)!
+        let numberOfDaysInMonth = numberOfDays(from: monthAgo, to: now) ?? 30
+
+
+        let lastMonthPredicate = HKQuery.predicateForSamples(withStart: monthAgo,
+                                                              end: now,
+                                                              options: .strictEndDate)
+
+        let query = HKStatisticsQuery.init(quantityType: sampleType, quantitySamplePredicate: lastMonthPredicate, options: .cumulativeSum) { (query, statistics, error) in
+            DispatchQueue.main.async {
+                guard let statistics = statistics else {
+                    completion(nil, 0, error)
+                    return
+                }
+
+                completion(statistics, numberOfDaysInMonth, nil)
+            }
+        }
+
+        store.execute(query)
+    }
 
     private func getMostRecentSample(for sampleType: HKSampleType,
                                    completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
@@ -165,6 +261,7 @@ class HealthKitService {
                                               ascending: false)
 
         let limit = 1
+
 
         let sampleQuery = HKSampleQuery(sampleType: sampleType,
                                         predicate: mostRecentPredicate,
@@ -185,7 +282,7 @@ class HealthKitService {
                                             }
         }
 
-        HKHealthStore().execute(sampleQuery)
+        store.execute(sampleQuery)
     }
 }
 

@@ -11,6 +11,7 @@
 		8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635EC9221A9550E00918B42 /* DietsListViewController.swift */; };
 		36B44A8421A9615F002D25EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B44A8321A9615F002D25EF /* HealthKit.framework */; };
 		36B44A8621A96398002D25EF /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8521A96398002D25EF /* HealthKitService.swift */; };
+		36B44A8821A96EB4002D25EF /* TotalEnergyIntakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */; };
 		8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652328E21A8570700F9D73A /* AppDelegate.swift */; };
 		8652329121A8570700F9D73A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652329021A8570700F9D73A /* ViewController.swift */; };
 		8652329421A8570700F9D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		36B44A8221A9615F002D25EF /* K Group Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "K Group Challenge.entitlements"; sourceTree = "<group>"; };
 		36B44A8321A9615F002D25EF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		36B44A8521A96398002D25EF /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
+		36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalEnergyIntakeService.swift; sourceTree = "<group>"; };
 		6EE2AB05116EC163D71F476F /* Pods-K Group Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-K Group Challenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		8635EC9021A951D400918B42 /* Diets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Diets.storyboard; sourceTree = "<group>"; };
 		8635EC9221A9550E00918B42 /* DietsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietsListViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +77,15 @@
 				8635EC9221A9550E00918B42 /* DietsListViewController.swift */,
 			);
 			path = Diets;
+            sourceTree = "<group>";
+        };
+		36B44A8921A99DD1002D25EF /* Health Services */ = {
+			isa = PBXGroup;
+			children = (
+				36B44A8521A96398002D25EF /* HealthKitService.swift */,
+				36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */,
+			);
+			path = "Health Services";
 			sourceTree = "<group>";
 		};
 		8652328221A8570700F9D73A = {
@@ -99,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				8635EC8F21A9414D00918B42 /* Diets */,
+				36B44A8921A99DD1002D25EF /* Health Services */,
 				36B44A8221A9615F002D25EF /* K Group Challenge.entitlements */,
 				8652328E21A8570700F9D73A /* AppDelegate.swift */,
 				8652329021A8570700F9D73A /* ViewController.swift */,
@@ -106,7 +118,6 @@
 				8652329521A8570900F9D73A /* Assets.xcassets */,
 				8652329721A8570900F9D73A /* LaunchScreen.storyboard */,
 				8652329A21A8570900F9D73A /* Info.plist */,
-				36B44A8521A96398002D25EF /* HealthKitService.swift */,
 			);
 			path = "K Group Challenge";
 			sourceTree = "<group>";
@@ -234,6 +245,7 @@
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
 				868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */,
 				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
+				36B44A8821A96EB4002D25EF /* TotalEnergyIntakeService.swift in Sources */,
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
