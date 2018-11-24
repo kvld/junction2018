@@ -10,9 +10,15 @@ import UIKit
 
 class HealthKitViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
-    
+
     @IBAction func buttonPressed(_ sender: Any) {
-        showNext()
+        healthService.authorize { [unowned self] (success, _) in
+            if success {
+                DispatchQueue.main.async {
+                    self.showNext()
+                }
+            }
+        }
     }
     
     func showNext() {

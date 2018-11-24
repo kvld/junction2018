@@ -10,6 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var tte: Int = 0
+    let healthService = HealthKitService()
+    let tteService = TotalEnergyExpenditure()
 
     var window: UIWindow?
 
@@ -44,3 +47,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension UIViewController {
+    var appDelegate: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+    var healthService: HealthKitService {
+        return appDelegate.healthService
+    }
+
+    var tteService: TotalEnergyExpenditure {
+        return appDelegate.tteService
+    }
+
+}
