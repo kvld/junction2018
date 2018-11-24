@@ -13,7 +13,7 @@
         <scene sceneID="282-lq-zcn">
             <objects>
                 <navigationController id="5KT-GU-EsO" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="z9b-zs-z1O">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="z9b-zs-z1O">
                         <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -30,11 +30,11 @@
             <objects>
                 <viewController id="wpp-kB-EnK" customClass="HealthKitViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Co-pQ-LKO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zje-gV-Ifb">
-                                <rect key="frame" x="67.5" y="461" width="240" height="50"/>
+                                <rect key="frame" x="67.5" y="577" width="240" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="BPc-n4-1vc"/>
                                     <constraint firstAttribute="width" constant="240" id="BhN-Ut-lIq"/>
@@ -45,13 +45,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We are using HealthKit to compute the diet, that will be a best fit for your lifestyle " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Rh-WP-8nx">
-                                <rect key="frame" x="60" y="32" width="255" height="143.5"/>
+                                <rect key="frame" x="60" y="148" width="255" height="143.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health-kit-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-mk-gzl">
-                                <rect key="frame" x="87.5" y="175.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="291.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="Lni-IQ-ida"/>
                                     <constraint firstAttribute="width" constant="200" id="u3u-tG-Az4"/>
@@ -88,11 +88,11 @@
             <objects>
                 <viewController id="U2g-1V-Ocx" customClass="CharacteristicsViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDj-dS-imu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EqB-cD-GkM">
-                                <rect key="frame" x="67.5" y="461" width="240" height="50"/>
+                                <rect key="frame" x="67.5" y="577" width="240" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="B8Z-Kj-hUX"/>
                                     <constraint firstAttribute="height" constant="50" id="kHF-0I-bJy"/>
@@ -102,32 +102,20 @@
                                     <action selector="buttonPressed:" destination="U2g-1V-Ocx" eventType="touchUpInside" id="lOY-Pf-uTR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your charasteristics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-sF-BXo">
-                                <rect key="frame" x="16" y="24" width="343" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your charasteristics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ElZ-sF-BXo">
+                                <rect key="frame" x="16" y="140" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2b-Da-OFm">
-                                <rect key="frame" x="16" y="71.5" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weight Loss" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSe-5B-zDk">
-                                <rect key="frame" x="16" y="144.5" width="343" height="31.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1000 kcal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJC-vf-Zbw">
+                                <rect key="frame" x="16" y="187.5" width="343" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best diet for you is:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMP-Bd-FrG">
-                                <rect key="frame" x="16" y="108" width="343" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="healthy-people" translatesAutoresizingMaskIntoConstraints="NO" id="eJm-jl-fOM">
-                                <rect key="frame" x="37.5" y="196" width="300" height="245"/>
+                                <rect key="frame" x="37.5" y="229.5" width="300" height="327.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="D7K-lN-aFz"/>
                                 </constraints>
@@ -164,18 +152,18 @@
             <objects>
                 <viewController id="J6K-ap-Zc6" customClass="KeskoConnectViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yOK-K1-OIQ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kesko-Logo" translatesAutoresizingMaskIntoConstraints="NO" id="rST-IA-NcV">
-                                <rect key="frame" x="87.5" y="175.5" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="291.5" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="GKK-gV-7RJ"/>
                                     <constraint firstAttribute="height" constant="200" id="sbq-E2-GRe"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Be-vc-Qhf">
-                                <rect key="frame" x="67.5" y="461" width="240" height="50"/>
+                                <rect key="frame" x="67.5" y="577" width="240" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="HTP-X9-wgP"/>
                                     <constraint firstAttribute="height" constant="50" id="m7e-HI-EfC"/>
@@ -186,7 +174,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know your Kesko information to better understand your food preferences " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNN-dj-ies">
-                                <rect key="frame" x="60" y="32" width="255" height="143.5"/>
+                                <rect key="frame" x="60" y="148" width="255" height="143.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -243,7 +231,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="2sn-gC-1sr">
-                                <rect key="frame" x="19" y="264" width="337.5" height="203"/>
+                                <rect key="frame" x="19" y="290" width="337.5" height="203"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="EmB-Rb-wIg">
                                         <rect key="frame" x="0.0" y="0.0" width="337.5" height="20.5"/>

@@ -17,7 +17,7 @@ final class RecipesViewController: UIViewController {
 
     private var centeredCollectionViewFlowLayout: CenteredCollectionViewFlowLayout!
 
-    private let daysTitles = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+    private let daysTitles = ["25", "26", "27", "28", "29", "30", "1"]
 
     private var viewModels: [RecipeViewModel] = []
 
@@ -90,23 +90,42 @@ final class RecipesViewController: UIViewController {
 
     private func setupDaysSwitch() {
         self.daysTitles.forEach { title in
-            let button = UIButton(type: .system)
+            let button = UIButton(type: .custom)
             button.setTitle(title, for: .normal)
             button.addTarget(
                 self,
                 action: #selector(self.selectDay(_:)),
                 for: .touchUpInside
             )
+            button.clipsToBounds = true
+            button.layer.cornerRadius = 21
+            button.widthAnchor.constraint(equalToConstant: 32).isActive = true
+
+            let btnBg = UIImageView(image: UIImage(named: "gradient")!)
+            button.widthAnchor.constraint(equalToConstant: 32).isActive = true
+            button.heightAnchor.constraint(equalToConstant: 32).isActive = true
+            button.insertSubview(btnBg, belowSubview: button.titleLabel!)
+
             self.weekStackView.addArrangedSubview(button)
         }
 
-        (self.weekStackView.arrangedSubviews.first as? UIButton)?.isSelected = true
+        if let button = self.weekStackView.arrangedSubviews.first as? UIButton {
+            self.selectDay(button)
+        }
     }
 
     @objc
     private func selectDay(_ sender: UIButton) {
         for view in self.weekStackView.arrangedSubviews {
-            (view as? UIButton)?.isSelected = view === sender
+            for subview in view.subviews {
+                if let subview = subview as? UIImageView {
+                    subview.isHidden = view !== sender
+                    (view as? UIButton)?.setTitleColor(
+                        view === sender ? .white : UIColor(red: 158/255, green: 171/255, blue: 190/255, alpha: 1.0),
+                        for: .normal
+                    )
+                }
+            }
         }
     }
 }

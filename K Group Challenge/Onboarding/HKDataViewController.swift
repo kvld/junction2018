@@ -70,7 +70,7 @@ class HKDataViewController: UIViewController {
                         default: activityLevel = .high
                         }
 
-                        self.appDelegate.tte = Int(self.tteService.calculateTotalEnergyIntake(age: data.age, sex: data.gender, weight: mass, height: height, activityLevel: activityLevel))
+                        self.appDelegate.tte = Int(self.tteService.calculateTotalEnergyIntake(age: data.age, sex: data.gender, weight: mass, height: 100*height, activityLevel: activityLevel))
                         DispatchQueue.main.async {
                             self.button.titleLabel?.text = "Show Result"
                             self.button.setNeedsLayout()

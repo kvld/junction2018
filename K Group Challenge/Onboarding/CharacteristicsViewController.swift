@@ -13,6 +13,7 @@ class CharacteristicsViewController: UIViewController {
     @IBOutlet var kcalLabel: UILabel!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         kcalLabel.text = "\(appDelegate.tte) kcal"
     }
     

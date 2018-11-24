@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-RH-NHe">
-                                <rect key="frame" x="0.0" y="80" width="375" height="495"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="88" width="375" height="487"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewLayout key="collectionViewLayout" id="Gav-li-dfC" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
                                 <cells/>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="94f-KA-C7g">
-                                <rect key="frame" x="16" y="36" width="343" height="44"/>
+                                <rect key="frame" x="16" y="36" width="343" height="42"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="aFl-rb-3tB"/>
+                                    <constraint firstAttribute="height" constant="42" id="aFl-rb-3tB"/>
                                 </constraints>
                             </stackView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMm-VE-rzS">
@@ -46,12 +46,12 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JUg-RH-NHe" firstAttribute="leading" secondItem="VK7-oB-qeX" secondAttribute="leading" id="3Vn-7L-gCQ"/>
                             <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="qMm-VE-rzS" secondAttribute="trailing" constant="16" id="8qT-6s-YVV"/>
                             <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="JUg-RH-NHe" secondAttribute="trailing" id="C5A-FX-zgB"/>
-                            <constraint firstItem="JUg-RH-NHe" firstAttribute="top" secondItem="94f-KA-C7g" secondAttribute="bottom" id="L8u-ZF-7mQ"/>
+                            <constraint firstItem="JUg-RH-NHe" firstAttribute="top" secondItem="94f-KA-C7g" secondAttribute="bottom" constant="10" id="L8u-ZF-7mQ"/>
                             <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="94f-KA-C7g" secondAttribute="trailing" constant="16" id="MTY-dv-9me"/>
                             <constraint firstItem="qMm-VE-rzS" firstAttribute="top" secondItem="JUg-RH-NHe" secondAttribute="bottom" constant="16" id="NaY-h4-eWw"/>
                             <constraint firstItem="qMm-VE-rzS" firstAttribute="leading" secondItem="VK7-oB-qeX" secondAttribute="leading" constant="16" id="VGG-Ux-ZIm"/>
