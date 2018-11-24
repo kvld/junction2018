@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xev-M4-QaO">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Recipes View Controller-->
+        <scene sceneID="Wk2-Gh-7Q4">
+            <objects>
+                <viewController id="Xev-M4-QaO" customClass="RecipesViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7yx-VT-bM8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JUg-RH-NHe">
+                                <rect key="frame" x="0.0" y="80" width="375" height="495"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Gav-li-dfC" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
+                                <cells/>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="94f-KA-C7g">
+                                <rect key="frame" x="16" y="36" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="aFl-rb-3tB"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qMm-VE-rzS">
+                                <rect key="frame" x="16" y="591" width="343" height="60"/>
+                                <color key="backgroundColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="BaE-J1-prO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Buy with Kesko">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="JUg-RH-NHe" firstAttribute="leading" secondItem="VK7-oB-qeX" secondAttribute="leading" id="3Vn-7L-gCQ"/>
+                            <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="qMm-VE-rzS" secondAttribute="trailing" constant="16" id="8qT-6s-YVV"/>
+                            <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="JUg-RH-NHe" secondAttribute="trailing" id="C5A-FX-zgB"/>
+                            <constraint firstItem="JUg-RH-NHe" firstAttribute="top" secondItem="94f-KA-C7g" secondAttribute="bottom" id="L8u-ZF-7mQ"/>
+                            <constraint firstItem="VK7-oB-qeX" firstAttribute="trailing" secondItem="94f-KA-C7g" secondAttribute="trailing" constant="16" id="MTY-dv-9me"/>
+                            <constraint firstItem="qMm-VE-rzS" firstAttribute="top" secondItem="JUg-RH-NHe" secondAttribute="bottom" constant="16" id="NaY-h4-eWw"/>
+                            <constraint firstItem="qMm-VE-rzS" firstAttribute="leading" secondItem="VK7-oB-qeX" secondAttribute="leading" constant="16" id="VGG-Ux-ZIm"/>
+                            <constraint firstItem="94f-KA-C7g" firstAttribute="top" secondItem="VK7-oB-qeX" secondAttribute="top" constant="16" id="Xq8-My-eVR"/>
+                            <constraint firstItem="94f-KA-C7g" firstAttribute="leading" secondItem="VK7-oB-qeX" secondAttribute="leading" constant="16" id="ci3-Bs-Tvv"/>
+                            <constraint firstItem="VK7-oB-qeX" firstAttribute="bottom" secondItem="qMm-VE-rzS" secondAttribute="bottom" constant="16" id="o1b-Oy-P3n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VK7-oB-qeX"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="JUg-RH-NHe" id="8c6-Pd-tCa"/>
+                        <outlet property="weekStackView" destination="94f-KA-C7g" id="uhZ-9X-DWB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e1C-Vy-Qkg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="25.637181409295355"/>
+        </scene>
+        <!--Detail Recipe View Controller-->
+        <scene sceneID="vgE-ZB-zbk">
+            <objects>
+                <viewController storyboardIdentifier="DetailRecipeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mTG-ct-qNX" customClass="DetailRecipeViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ctY-yg-BY9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="fYi-tp-CET"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hSU-kG-Ho0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="919" y="23"/>
+        </scene>
+    </scenes>
+</document>
