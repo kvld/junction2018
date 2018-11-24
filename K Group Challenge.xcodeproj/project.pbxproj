@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8635EC9121A951D400918B42 /* Diets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8635EC9021A951D400918B42 /* Diets.storyboard */; };
-		8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635EC9221A9550E00918B42 /* DietsListViewController.swift */; };
+		081CAD7E21A93DFE0029F52F /* HealthKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */; };
+		081CAD8121A96A070029F52F /* CharacteristicsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */; };
+		081CAD8321A96A150029F52F /* KeskoConnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */; };
+		082D4D8121A97000003890D5 /* FoodPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D4D8021A97000003890D5 /* FoodPreferencesViewController.swift */; };
+		082D4D8421A970DA003890D5 /* FoodPreferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 082D4D8321A970DA003890D5 /* FoodPreferences.storyboard */; };
+		082D4D8721A9866E003890D5 /* FoodItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082D4D8521A9866E003890D5 /* FoodItemCollectionViewCell.swift */; };
+		082D4D8821A9866E003890D5 /* FoodItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 082D4D8621A9866E003890D5 /* FoodItemCollectionViewCell.xib */; };
+		0846CB6A21A9935D001BE035 /* SectionSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0846CB6921A9935D001BE035 /* SectionSlider.swift */; };
 		36B44A8421A9615F002D25EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B44A8321A9615F002D25EF /* HealthKit.framework */; };
 		36B44A8621A96398002D25EF /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8521A96398002D25EF /* HealthKitService.swift */; };
 		36B44A8821A96EB4002D25EF /* TotalEnergyIntakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */; };
+		8635EC9121A951D400918B42 /* Diets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8635EC9021A951D400918B42 /* Diets.storyboard */; };
+		8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8635EC9221A9550E00918B42 /* DietsListViewController.swift */; };
 		8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652328E21A8570700F9D73A /* AppDelegate.swift */; };
 		8652329121A8570700F9D73A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8652329021A8570700F9D73A /* ViewController.swift */; };
-		8652329421A8570700F9D73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Main.storyboard */; };
+		8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329221A8570700F9D73A /* Onboarding.storyboard */; };
 		8652329621A8570900F9D73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8652329521A8570900F9D73A /* Assets.xcassets */; };
 		8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8652329721A8570900F9D73A /* LaunchScreen.storyboard */; };
 		868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251B621A9565A00AE8E82 /* DietTableViewCell.swift */; };
@@ -25,6 +33,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitViewController.swift; sourceTree = "<group>"; };
+		081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacteristicsViewController.swift; sourceTree = "<group>"; };
+		081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeskoConnectViewController.swift; sourceTree = "<group>"; };
+		082D4D8021A97000003890D5 /* FoodPreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodPreferencesViewController.swift; sourceTree = "<group>"; };
+		082D4D8321A970DA003890D5 /* FoodPreferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FoodPreferences.storyboard; sourceTree = "<group>"; };
+		082D4D8521A9866E003890D5 /* FoodItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		082D4D8621A9866E003890D5 /* FoodItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		0846CB6921A9935D001BE035 /* SectionSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionSlider.swift; sourceTree = "<group>"; };
 		36B44A8221A9615F002D25EF /* K Group Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "K Group Challenge.entitlements"; sourceTree = "<group>"; };
 		36B44A8321A9615F002D25EF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		36B44A8521A96398002D25EF /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
@@ -35,7 +51,7 @@
 		8652328B21A8570700F9D73A /* K Group Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "K Group Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8652328E21A8570700F9D73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8652329021A8570700F9D73A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8652329321A8570700F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8652329321A8570700F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Onboarding.storyboard; sourceTree = "<group>"; };
 		8652329521A8570900F9D73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8652329821A8570900F9D73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8652329A21A8570900F9D73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +85,37 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		081CAD7F21A969E50029F52F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				8652329221A8570700F9D73A /* Onboarding.storyboard */,
+				081CAD7D21A93DFE0029F52F /* HealthKitViewController.swift */,
+				081CAD8021A96A070029F52F /* CharacteristicsViewController.swift */,
+				081CAD8221A96A150029F52F /* KeskoConnectViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		082D4D8221A97004003890D5 /* Food Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				082D4D8321A970DA003890D5 /* FoodPreferences.storyboard */,
+				082D4D8021A97000003890D5 /* FoodPreferencesViewController.swift */,
+				082D4D8521A9866E003890D5 /* FoodItemCollectionViewCell.swift */,
+				082D4D8621A9866E003890D5 /* FoodItemCollectionViewCell.xib */,
+			);
+			path = "Food Preferences";
+			sourceTree = "<group>";
+		};
+		36B44A8921A99DD1002D25EF /* Health Services */ = {
+			isa = PBXGroup;
+			children = (
+				36B44A8521A96398002D25EF /* HealthKitService.swift */,
+				36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */,
+			);
+			path = "Health Services";
+			sourceTree = "<group>";
+		};
 		8635EC8F21A9414D00918B42 /* Diets */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,15 +124,6 @@
 				8635EC9221A9550E00918B42 /* DietsListViewController.swift */,
 			);
 			path = Diets;
-            sourceTree = "<group>";
-        };
-		36B44A8921A99DD1002D25EF /* Health Services */ = {
-			isa = PBXGroup;
-			children = (
-				36B44A8521A96398002D25EF /* HealthKitService.swift */,
-				36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */,
-			);
-			path = "Health Services";
 			sourceTree = "<group>";
 		};
 		8652328221A8570700F9D73A = {
@@ -109,15 +147,17 @@
 		8652328D21A8570700F9D73A /* K Group Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				082D4D8221A97004003890D5 /* Food Preferences */,
+				081CAD7F21A969E50029F52F /* Onboarding */,
 				8635EC8F21A9414D00918B42 /* Diets */,
 				36B44A8921A99DD1002D25EF /* Health Services */,
 				36B44A8221A9615F002D25EF /* K Group Challenge.entitlements */,
 				8652328E21A8570700F9D73A /* AppDelegate.swift */,
 				8652329021A8570700F9D73A /* ViewController.swift */,
-				8652329221A8570700F9D73A /* Main.storyboard */,
 				8652329521A8570900F9D73A /* Assets.xcassets */,
 				8652329721A8570900F9D73A /* LaunchScreen.storyboard */,
 				8652329A21A8570900F9D73A /* Info.plist */,
+				0846CB6921A9935D001BE035 /* SectionSlider.swift */,
 			);
 			path = "K Group Challenge";
 			sourceTree = "<group>";
@@ -153,6 +193,7 @@
 				8652328721A8570700F9D73A /* Sources */,
 				8652328821A8570700F9D73A /* Frameworks */,
 				8652328921A8570700F9D73A /* Resources */,
+				8A2CD47E72EA40930571F0FC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -209,7 +250,10 @@
 				8635EC9121A951D400918B42 /* Diets.storyboard in Resources */,
 				8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */,
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
-				8652329421A8570700F9D73A /* Main.storyboard in Resources */,
+				8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */,
+				082D4D8821A9866E003890D5 /* FoodItemCollectionViewCell.xib in Resources */,
+				082D4D8421A970DA003890D5 /* FoodPreferences.storyboard in Resources */,
+				8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */,
 				868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +261,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8A2CD47E72EA40930571F0FC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CenteredCollectionView/CenteredCollectionView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CenteredCollectionView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-K Group Challenge/Pods-K Group Challenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C06BF6B5EB8D63165FEB77A4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -242,12 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				082D4D8721A9866E003890D5 /* FoodItemCollectionViewCell.swift in Sources */,
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
 				868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */,
 				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
 				36B44A8821A96EB4002D25EF /* TotalEnergyIntakeService.swift in Sources */,
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
+				082D4D8121A97000003890D5 /* FoodPreferencesViewController.swift in Sources */,
+				081CAD8121A96A070029F52F /* CharacteristicsViewController.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
+				081CAD8321A96A150029F52F /* KeskoConnectViewController.swift in Sources */,
+				0846CB6A21A9935D001BE035 /* SectionSlider.swift in Sources */,
+				081CAD7E21A93DFE0029F52F /* HealthKitViewController.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
 				36B44A8621A96398002D25EF /* HealthKitService.swift in Sources */,
 			);
@@ -256,12 +328,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8652329221A8570700F9D73A /* Main.storyboard */ = {
+		8652329221A8570700F9D73A /* Onboarding.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8652329321A8570700F9D73A /* Base */,
 			);
-			name = Main.storyboard;
+			name = Onboarding.storyboard;
 			sourceTree = "<group>";
 		};
 		8652329721A8570900F9D73A /* LaunchScreen.storyboard */ = {

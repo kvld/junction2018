@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jrT-tG-S7X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Food Preferences View Controller-->
+        <scene sceneID="pAp-RK-1vg">
+            <objects>
+                <viewController id="jrT-tG-S7X" customClass="FoodPreferencesViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dyn-Tb-Tr0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-UP-5Mu">
+                                <rect key="frame" x="0.0" y="31" width="375" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="PGs-vS-75y" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hl4-2u-bVQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-sd-mc5">
+                                <rect key="frame" x="67.5" y="597" width="240" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4OS-GN-MpC"/>
+                                    <constraint firstAttribute="width" constant="240" id="ktC-uV-gcW"/>
+                                </constraints>
+                                <state key="normal" title="Finish"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dyY-sd-mc5" firstAttribute="top" secondItem="B2r-UP-5Mu" secondAttribute="bottom" constant="16" id="UVJ-JH-u7N"/>
+                            <constraint firstItem="B2r-UP-5Mu" firstAttribute="leading" secondItem="4F0-wM-N3B" secondAttribute="leading" id="YUU-Ec-EjO"/>
+                            <constraint firstItem="dyY-sd-mc5" firstAttribute="centerX" secondItem="4F0-wM-N3B" secondAttribute="centerX" id="f6k-rr-kb8"/>
+                            <constraint firstItem="B2r-UP-5Mu" firstAttribute="top" secondItem="4F0-wM-N3B" secondAttribute="top" constant="11" id="i7r-R9-FKI"/>
+                            <constraint firstItem="4F0-wM-N3B" firstAttribute="trailing" secondItem="B2r-UP-5Mu" secondAttribute="trailing" id="meb-eI-jQG"/>
+                            <constraint firstItem="4F0-wM-N3B" firstAttribute="bottom" secondItem="dyY-sd-mc5" secondAttribute="bottom" constant="20" id="wFz-w1-wEM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4F0-wM-N3B"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="B2r-UP-5Mu" id="JuJ-Rg-AcJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNs-qx-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="472.80000000000001" y="155.17241379310346"/>
+        </scene>
+    </scenes>
+</document>
