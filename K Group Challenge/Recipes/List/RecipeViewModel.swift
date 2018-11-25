@@ -17,4 +17,9 @@ struct RecipeViewModel {
     let carbohydrates: String
     let fats: String
     let proteins: String
+
+    let caloriesPercent: Float
+    let carbohydratesPercent: Float
+    let fatsPercent: Float
+    let proteinsPercent: Float
 }
