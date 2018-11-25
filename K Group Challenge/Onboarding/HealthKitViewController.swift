@@ -24,6 +24,7 @@ class HealthKitViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .white
         self.navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     @IBAction func buttonPressed(_ sender: Any) {

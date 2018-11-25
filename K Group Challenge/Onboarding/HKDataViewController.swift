@@ -28,6 +28,7 @@ class HKDataViewController: UIViewController {
         [ageValue, sexValue, weightLabel, heightLabel, basalEnergyValue, activeEnergyValue].forEach {
             $0.text = ""
         }
+        UIApplication.shared.statusBarStyle = .lightContent
     }
 
     private var calculated: Bool = false

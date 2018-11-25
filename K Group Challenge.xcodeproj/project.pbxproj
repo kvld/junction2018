@@ -33,6 +33,7 @@
 		868251B921A9565A00AE8E82 /* DietTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 868251B721A9565A00AE8E82 /* DietTableViewCell.xib */; };
 		868251BD21A961DE00AE8E82 /* DietViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BC21A961DE00AE8E82 /* DietViewModel.swift */; };
 		868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 868251BE21A9698100AE8E82 /* ImageCarouselView.swift */; };
+		86E4E08821AA185C007BE6AD /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4E08721AA185C007BE6AD /* CircularProgressBar.swift */; };
 		86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */; };
 		86F0685521A9858D00E99ADE /* RecipeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */; };
 		86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F0685621A985BC00E99ADE /* RecipesViewController.swift */; };
@@ -72,6 +73,7 @@
 		868251B721A9565A00AE8E82 /* DietTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DietTableViewCell.xib; sourceTree = "<group>"; };
 		868251BC21A961DE00AE8E82 /* DietViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietViewModel.swift; sourceTree = "<group>"; };
 		868251BE21A9698100AE8E82 /* ImageCarouselView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCarouselView.swift; sourceTree = "<group>"; };
+		86E4E08721AA185C007BE6AD /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
 		86F0685221A9858D00E99ADE /* RecipeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCollectionViewCell.swift; sourceTree = "<group>"; };
 		86F0685321A9858D00E99ADE /* RecipeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeCollectionViewCell.xib; sourceTree = "<group>"; };
 		86F0685621A985BC00E99ADE /* RecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipesViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				8652329721A8570900F9D73A /* LaunchScreen.storyboard */,
 				8652329A21A8570900F9D73A /* Info.plist */,
 				0846CB6921A9935D001BE035 /* SectionSlider.swift */,
+				86E4E08721AA185C007BE6AD /* CircularProgressBar.swift */,
 			);
 			path = "K Group Challenge";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SectionedSlider/SectionedSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UICircularProgressRing/UICircularProgressRing.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -353,6 +357,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SectionedSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UICircularProgressRing.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,6 +400,7 @@
 				86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
+				86E4E08821AA185C007BE6AD /* CircularProgressBar.swift in Sources */,
 				08A3606021A9B07C00005692 /* Network.swift in Sources */,
 				082D4D8721A9866E003890D5 /* FoodItemCollectionViewCell.swift in Sources */,
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
