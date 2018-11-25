@@ -9,6 +9,7 @@
 import UIKit
 import CenteredCollectionView
 import PromiseKit
+import SVProgressHUD
 
 struct FoodItem {
     var title: String
@@ -78,10 +79,10 @@ class FoodPreferencesViewController: UIViewController {
     func collectPreferences() -> [(item: FoodItem, rank: Int)] {
         
         return foodItems.enumerated().compactMap { offset, item in
-            if selected[offset] < 3 {
+            if selected[offset] < 1 {
                 return (item: item, rank: -1)
             }
-            if selected[offset] > 3 {
+            if selected[offset] > 2 {
                 return (item: item, rank: 1)
             }
             return nil
@@ -90,10 +91,23 @@ class FoodPreferencesViewController: UIViewController {
     
     @IBAction func finishPressed(_ sender: Any) {
         let preferences = collectPreferences()
+        (sender as? UIButton)?.isEnabled = false
+        SVProgressHUD.show()
         Network.shared.getRecipes(ranks: preferences, dietType: .gain).done {[weak self] newDiets in
+            DispatchQueue.main.async {
+                (sender as? UIButton)?.isEnabled = true
+                SVProgressHUD.dismiss()
+            }
             print("done")
             diets = newDiets
-            self?.performSegue(withIdentifier: "showNext", sender: nil)
+            DispatchQueue.main.async {
+                self?.performSegue(withIdentifier: "showNext", sender: nil)
+            }
+        }.catch { _ in
+            DispatchQueue.main.async {
+                (sender as? UIButton)?.isEnabled = true
+                SVProgressHUD.showError(withStatus: "Operation failed")
+            }
         }
     }
 }
@@ -110,6 +124,7 @@ extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionV
         
         let item = foodItems[indexPath.item]
         cell.update(foodItem: item)
+        cell.slider.selectedSection = selected[indexPath.item]
         cell.sectionChanged = { [weak self] newSection in
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             self?.selected[indexPath.item] = newSection

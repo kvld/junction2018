@@ -160,11 +160,12 @@ final class RecipesViewController: UIViewController {
                         currentDay = index
                         refreshViewModels()
                         collectionView.reloadData()
+
+                        centeredCollectionViewFlowLayout.scrollToPage(index: 0, animated: true)
                     }
                 }
             }
         }
-        
     }
 }
 
