@@ -24,6 +24,14 @@ final class RecipesViewController: UIViewController {
     var menu: WeekMenu?
     var currentDay = 0
     
+    @IBAction func onButtonClick(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "PriceList", bundle: nil)
+        let vc = storyboard.instantiateViewController(
+            withIdentifier: "MapViewController"
+        ) as! MapViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

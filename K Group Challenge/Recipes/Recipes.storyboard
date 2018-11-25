@@ -107,6 +107,9 @@
                                         <integer key="value" value="20"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="Xev-M4-QaO" eventType="touchUpInside" id="XyW-vD-azx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
