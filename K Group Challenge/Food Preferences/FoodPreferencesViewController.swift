@@ -8,6 +8,7 @@
 
 import UIKit
 import CenteredCollectionView
+import PromiseKit
 
 struct FoodItem {
     var title: String
@@ -27,6 +28,8 @@ class FoodPreferencesViewController: UIViewController {
         FoodItem(title: "Cheese", emoji: "🧀", ids: [6726, 12322, 10464, 5487, 9112, 13899, 5598, 10465, 14423]),
         FoodItem(title: "Bread", emoji: "🍞", ids: [12429, 8105, 10456, 13945, 10458, 14886, 13944, 9395, 14524, 10457, 10454, 13628, 11760, 10475, 10480, 10472]),
     ]
+    
+    var selected: [Int] = [3, 3, 3, 3, 3, 3]
     
     // The width of each cell with respect to the screen.
     // Can be a constant or a percentage.
@@ -71,6 +74,28 @@ class FoodPreferencesViewController: UIViewController {
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         UIApplication.shared.statusBarStyle = .default
     }
+    
+    func collectPreferences() -> [(item: FoodItem, rank: Int)] {
+        
+        return foodItems.enumerated().compactMap { offset, item in
+            if selected[offset] < 3 {
+                return (item: item, rank: -1)
+            }
+            if selected[offset] > 3 {
+                return (item: item, rank: 1)
+            }
+            return nil
+        }
+    }
+    
+    @IBAction func finishPressed(_ sender: Any) {
+        let preferences = collectPreferences()
+        Network.shared.getRecipes(ranks: preferences, dietType: .normal).done { [weak self] in
+            print("done")
+            self?.performSegue(withIdentifier: "showNext", sender: nil)
+        }
+    }
+    
 }
 
 extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -85,6 +110,9 @@ extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionV
         
         let item = foodItems[indexPath.item]
         cell.update(foodItem: item)
+        cell.sectionChanged = { [weak self] newSection in
+            self?.selected[indexPath.item] = newSection
+        }
         return cell
     }
 }

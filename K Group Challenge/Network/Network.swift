@@ -11,6 +11,12 @@ import Alamofire
 import PromiseKit
 import SwiftyJSON
 
+enum DietType: Int {
+    case gain = 0
+    case normal = 1
+    case loose = 2
+}
+
 class Network {
     static let shared = Network()
     
@@ -18,11 +24,23 @@ class Network {
     
     private init() {}
     
-    func getRecipes(ranks: [(item: FoodItem, rank: Int)]) -> Promise<Void> {
+    func getRecipes(ranks: [(item: FoodItem, rank: Int)], dietType: DietType) -> Promise<Void> {
         return Promise { seal in
-            let params: Parameters = [:]
-            let endpoint = "ENDPOINT"
-            Alamofire.request(apiPath + endpoint, method: .get, parameters: params, encoding: URLEncoding.default, headers: nil).responseSwiftyJSON { response in
+            var items = [String: Int]()
+            for rank in ranks {
+                if rank.rank != 0 {
+                    rank.item.ids.forEach({ id in
+                        items["\(id)"] = rank.rank
+                    })
+                }
+            }
+            
+            let params: Parameters = [
+                "preferences": items
+            ]
+            
+            let endpoint = "recipe/recommend/"
+            Alamofire.request(apiPath + endpoint, method: .post, parameters: params, encoding: JSONEncoding.default, headers: nil).responseSwiftyJSON { response in
                 switch response.result {
                 case .failure(let error):
                     seal.reject(error)
