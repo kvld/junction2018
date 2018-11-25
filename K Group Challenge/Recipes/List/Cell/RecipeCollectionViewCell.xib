@@ -189,6 +189,7 @@
                             <constraint firstItem="lTh-gt-VYG" firstAttribute="leading" secondItem="joC-CP-Bh2" secondAttribute="leading" constant="20" id="siM-rL-GWd"/>
                             <constraint firstItem="lTh-gt-VYG" firstAttribute="top" secondItem="P1v-Rs-UKX" secondAttribute="bottom" constant="16" id="uQj-3u-9UB"/>
                             <constraint firstAttribute="bottom" secondItem="eXf-7U-IAN" secondAttribute="bottom" constant="16" id="vgK-OT-JaR"/>
+                            <constraint firstItem="oVf-Ur-MNt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P1v-Rs-UKX" secondAttribute="trailing" constant="16" id="xL0-Qq-q24"/>
                             <constraint firstItem="eXf-7U-IAN" firstAttribute="top" secondItem="QCj-SN-XGW" secondAttribute="bottom" constant="8" id="yNQ-QY-cvh"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
