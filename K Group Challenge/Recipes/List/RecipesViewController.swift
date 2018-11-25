@@ -98,7 +98,7 @@ final class RecipesViewController: UIViewController {
 
         self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         self.centeredCollectionViewFlowLayout.minimumInteritemSpacing = 0
-        self.centeredCollectionViewFlowLayout.minimumLineSpacing = 8
+        self.centeredCollectionViewFlowLayout.minimumLineSpacing = 0
     }
 
     private func setupDaysSwitch() {

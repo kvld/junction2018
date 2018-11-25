@@ -19,7 +19,7 @@ final class DietTableViewCell: UITableViewCell {
     private static let shadowColor = UIColor.black.cgColor
     private static let shadowOffset = CGSize(width: 0, height: 2)
     private static let shadowOpacity: Float = 0.04
-    private static let shadowRadius: CGFloat = 24.0
+    private static let shadowRadius: CGFloat = 18.0
 
     private var shadowLayer: CAShapeLayer?
     private var backgroundLayer: CAShapeLayer?

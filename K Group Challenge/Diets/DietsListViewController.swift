@@ -93,7 +93,7 @@ final class DietsListViewController: UIViewController {
 
 extension DietsListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12 //self.viewModels.count
+        return self.viewModels.count
     }
 
     func tableView(
@@ -105,7 +105,7 @@ extension DietsListViewController: UITableViewDataSource {
             for: indexPath
         ) as! DietTableViewCell
 
-        let viewModel = self.viewModels[indexPath.row % 3]
+        let viewModel = self.viewModels[indexPath.row]
         cell.configure(with: viewModel)
         return cell
     }

@@ -35,6 +35,8 @@ final class ImageCarouselView: UIView {
         let view = UIView()
         view.backgroundColor = UIColor.black.withAlphaComponent(0.20)
         view.isUserInteractionEnabled = false
+        view.layer.cornerRadius = 4.0
+        view.clipsToBounds = true
         return view
     }()
 
