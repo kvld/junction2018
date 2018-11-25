@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--PullUpController demo-->
+        <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="K_Group_Challenge" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,18 +45,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="PullUpController demo" id="ASP-mA-5U8">
-                        <barButtonItem key="leftBarButtonItem" title="Add" id="fhd-cR-KB3">
-                            <connections>
-                                <action selector="addButtonTapped" destination="BYZ-38-t0r" id="pDU-fa-0fg"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Remove" id="1m7-Ay-ZD4">
-                            <connections>
-                                <action selector="removeButtonTapped" destination="BYZ-38-t0r" id="SGW-D0-G2y"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="drN-fA-22T" id="EE5-qd-AEu"/>
                     </connections>

@@ -43,6 +43,8 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Map"
+
         mapView.addAnnotations([
             ShopAnnotation.init(coordinate: CLLocationCoordinate2D.init(latitude: 60.184824, longitude: 24.82356), title: "K-Market Otaniemi"),
             ShopAnnotation.init(coordinate: CLLocationCoordinate2D.init(latitude: 60.176325, longitude: 24.805136), title: "K-supermarket Tapiola"),
