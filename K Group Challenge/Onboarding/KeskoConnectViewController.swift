@@ -21,6 +21,7 @@ class KeskoConnectViewController: UIViewController {
     }
 
     @IBAction func buttonPressed(_ sender: Any) {
+        UIImpactFeedbackGenerator.init(style: .light).impactOccurred()
         showNext()
     }
     

@@ -55,13 +55,16 @@ class HKDataViewController: UIViewController {
         let superview = ageContainer.superview!
         superview.layoutIfNeeded()
         self.ageContainer.subviews[0].layoutIfNeeded()
+        let feedbackGenerator = UIImpactFeedbackGenerator(style: .medium)
+        feedbackGenerator.prepare()
+        feedbackGenerator.impactOccurred()
         UIView.animate(withDuration: 0.3, animations: {
             self.button.alpha = 0.0
             self.ageContainer.alpha = 1.0
             superview.layoutIfNeeded()
-
         }, completion: { (_) in
             self.sexContainer.subviews[0].layoutIfNeeded()
+            feedbackGenerator.impactOccurred()
             UIView.animate(withDuration: 0.3, delay: 0.7, animations: {
                 self.sexContainer.isHidden = false
                 self.sexContainer.alpha = 1.0
@@ -73,6 +76,7 @@ class HKDataViewController: UIViewController {
                     let mass = mass ?? 81.4
                     DispatchQueue.main.async {
                         self.weightContainer.subviews[0].layoutIfNeeded()
+                        feedbackGenerator.impactOccurred()
                         UIView.animate(withDuration: 0.3, delay: 0.7, animations: {
                             self.weightContainer.isHidden = false
                             self.weightContainer.alpha = 1.0
@@ -82,6 +86,7 @@ class HKDataViewController: UIViewController {
                                 let height = height ?? 1.85
                                 DispatchQueue.main.async {
                                     self.heightContainer.subviews[0].layoutIfNeeded()
+                                    feedbackGenerator.impactOccurred()
                                     UIView.animate(withDuration: 0.3, delay: 0.7, animations: {
                                         self.heightContainer.isHidden = false
                                         self.heightContainer.alpha = 1.0
@@ -91,6 +96,7 @@ class HKDataViewController: UIViewController {
                                             let restingCalories = restingCalories ?? 2087.2
                                             DispatchQueue.main.async {
                                                 self.basalEnergyContainer.subviews[0].layoutIfNeeded()
+                                                feedbackGenerator.impactOccurred()
                                                 UIView.animate(withDuration: 0.3, delay: 0.7, animations: {
                                                     self.basalEnergyContainer.isHidden = false
                                                     self.basalEnergyContainer.alpha = 1.0
@@ -100,6 +106,7 @@ class HKDataViewController: UIViewController {
                                                         let activeCalories = activeCalories ?? 743.9
                                                         DispatchQueue.main.async {
                                                             self.activeEnergyContainer.subviews[0].layoutIfNeeded()
+                                                            feedbackGenerator.impactOccurred()
                                                             UIView.animate(withDuration: 0.3, delay: 0.7, animations: {
                                                                 self.activeEnergyValue.text = "\(activeCalories.rounded()) kcal"
                                                                 self.activeEnergyContainer.isHidden = false

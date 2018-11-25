@@ -26,7 +26,7 @@ class WeekMenu {
     init(json: JSON) {
         //5 intakes, each contains info about weekdays
 //        for weeklyIntakesJSON in json {
-        for intakeId in 0..<6 {
+        for intakeId in (0..<6).shuffled() {
             let weeklyIntakesJSON = json["\(intakeId)"]
             for (day, recipeJSON) in weeklyIntakesJSON.arrayValue.enumerated() {
                 if recipesForDay[day] == nil {

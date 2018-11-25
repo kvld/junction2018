@@ -93,7 +93,7 @@ class FoodPreferencesViewController: UIViewController {
         let preferences = collectPreferences()
         (sender as? UIButton)?.isEnabled = false
         SVProgressHUD.show()
-        Network.shared.getRecipes(ranks: preferences, dietType: .normal).done {[weak self] newDiets in
+        Network.shared.getRecipes(ranks: preferences, dietType: .gain).done {[weak self] newDiets in
             DispatchQueue.main.async {
                 (sender as? UIButton)?.isEnabled = true
                 SVProgressHUD.dismiss()
@@ -126,6 +126,7 @@ extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionV
         cell.update(foodItem: item)
         cell.slider.selectedSection = selected[indexPath.item]
         cell.sectionChanged = { [weak self] newSection in
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             self?.selected[indexPath.item] = newSection
         }
         return cell
