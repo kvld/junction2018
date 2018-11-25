@@ -90,7 +90,7 @@ class FoodPreferencesViewController: UIViewController {
     
     @IBAction func finishPressed(_ sender: Any) {
         let preferences = collectPreferences()
-        Network.shared.getRecipes(ranks: preferences, dietType: .normal).done {[weak self] newDiets in
+        Network.shared.getRecipes(ranks: preferences, dietType: .gain).done {[weak self] newDiets in
             print("done")
             diets = newDiets
             self?.performSegue(withIdentifier: "showNext", sender: nil)
@@ -111,6 +111,7 @@ extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionV
         let item = foodItems[indexPath.item]
         cell.update(foodItem: item)
         cell.sectionChanged = { [weak self] newSection in
+            UIImpactFeedbackGenerator(style: .medium).impactOccurred()
             self?.selected[indexPath.item] = newSection
         }
         return cell
