@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class ImageCarouselView: UIView {
     private lazy var stackView: UIStackView = {
@@ -139,12 +140,48 @@ final class ImageCarouselView: UIView {
                 equalTo: self.heightAnchor
             ).isActive = true
 
-            imageView.image = image.image
+            Nuke.loadImage(
+                with: URL(string: image.imagePath)!,
+                options: ImageLoadingOptions(
+                    transition: ImageLoadingOptions.Transition.fadeIn(
+                        duration: 0.1
+                    )
+                ),
+                into: imageView
+            )
             imageView.contentMode = .scaleAspectFill
         }
 
         titleLabel.text = titles[currentImageIndex]
     }
+    
+//    func set(images: [String]) {
+//        pageControl.numberOfPages = images.count
+//        pageControl.currentPage = 0
+//        for image in images {
+//            let imageView = UIImageView()
+//            stackView.addArrangedSubview(imageView)
+//            imageView.translatesAutoresizingMaskIntoConstraints = false
+//            imageView.widthAnchor.constraint(
+//                equalTo: self.widthAnchor
+//                ).isActive = true
+//            imageView.heightAnchor.constraint(
+//                equalTo: self.heightAnchor
+//                ).isActive = true
+//            
+//            
+//            Nuke.loadImage(
+//                with: URL(string: image)!,
+//                options: ImageLoadingOptions(
+//                    transition: ImageLoadingOptions.Transition.fadeIn(
+//                        duration: 0.1
+//                    )
+//                ),
+//                into: imageView
+//            )
+//            imageView.contentMode = .scaleAspectFill
+//        }
+//    }
 }
 
 extension ImageCarouselView: UIScrollViewDelegate {

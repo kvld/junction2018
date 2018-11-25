@@ -51,6 +51,27 @@ final class DietTableViewCell: UITableViewCell {
         self.priceLabel.text = viewModel.price
         self.caloriesLabel.text = viewModel.calories
         self.imagesView.set(data: viewModel.recipes)
+        
+        
+//        for ingredient in viewModel.ingredients {
+//            let ingredientView = UIStackView()
+//            ingredientView.axis = .horizontal
+//
+//            let titleLabel = UILabel()
+//            titleLabel.text = ingredient.title
+//
+//            let quantityLabel = UILabel()
+//            quantityLabel.textAlignment = .right
+//            quantityLabel.text = ingredient.quantity
+//
+//            quantityLabel.translatesAutoresizingMaskIntoConstraints = false
+//            quantityLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+//
+//            ingredientView.addArrangedSubview(titleLabel)
+//            ingredientView.addArrangedSubview(quantityLabel)
+//
+//            self.itemsStackView.addArrangedSubview(ingredientView)
+//        }
     }
 
     private func dropShadow() {

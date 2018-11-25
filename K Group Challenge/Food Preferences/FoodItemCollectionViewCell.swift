@@ -15,6 +15,8 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
 
     
+    var sectionChanged: ((Int)->Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -40,5 +42,6 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
 extension FoodItemCollectionViewCell: SectionedSliderDelegate {
     func sectionChanged(slider: SectionedSlider, selected: Int) {
         stateLabel.text = states[selected]
+        sectionChanged?(selected)
     }
 }

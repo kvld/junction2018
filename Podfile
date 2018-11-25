@@ -7,4 +7,5 @@ target 'K Group Challenge' do
   pod 'SwiftyJSON', '3.1.4'
   pod 'PromiseKit', '6.5.2'
   pod 'UICircularProgressRing'
+  pod 'Nuke', '7.5.0'
 end

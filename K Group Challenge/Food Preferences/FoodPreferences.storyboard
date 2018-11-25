@@ -38,7 +38,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="NSc-99-7KB" kind="show" id="dLW-zv-o3x"/>
+                                    <action selector="finishPressed:" destination="jrT-tG-S7X" eventType="touchUpInside" id="pSI-AU-cvt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -57,6 +57,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="B2r-UP-5Mu" id="JuJ-Rg-AcJ"/>
+                        <segue destination="NSc-99-7KB" kind="show" identifier="showNext" id="RjJ-la-Ly1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNs-qx-god" userLabel="First Responder" sceneMemberID="firstResponder"/>
