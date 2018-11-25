@@ -12,7 +12,8 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var slider: SectionedSlider!
     @IBOutlet weak var stateLabel: UILabel!
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var itemEmoji: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,7 +21,6 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
         slider.delegate = self
     }
 
-    //TODO: Заменить на emoji
     let states: [String] = [
         "Hate",
         "Don't like",
@@ -32,7 +32,7 @@ class FoodItemCollectionViewCell: UICollectionViewCell {
     
     func update(foodItem: FoodItem) {
         itemNameLabel.text = foodItem.title
-        itemEmoji.text = foodItem.emoji
+        imageView.image = foodItem.image
         stateLabel.text = states[slider.selectedSection]
     }
 }
