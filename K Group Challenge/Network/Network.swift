@@ -24,7 +24,7 @@ class Network {
     
     private init() {}
     
-    func getRecipes(ranks: [(item: FoodItem, rank: Int)], dietType: DietType) -> Promise<Void> {
+    func getRecipes(ranks: [(item: FoodItem, rank: Int)], dietType: DietType) -> Promise<Diets> {
         return Promise { seal in
             var items = [String: Int]()
             for rank in ranks {
@@ -45,7 +45,8 @@ class Network {
                 case .failure(let error):
                     seal.reject(error)
                 case .success(let json):
-                    seal.fulfill(())
+                    let diets = Diets(json: json)
+                    seal.fulfill(diets)
                 }
             }
         }

@@ -19,4 +19,20 @@ struct DietViewModel {
 
     let calories: String
     let price: String
+    var imagePaths: [String] = []
+    
+    init(diet: WeekMenu) {
+        var calories = 0
+        for day in 0 ..< 7 {
+            for recipe in diet.recipesForDay[day]! {
+                if imagePaths.count < 5 {
+                    imagePaths += [recipe.imageURL]
+                }
+                calories += recipe.kcal
+            }
+        }
+        self.calories = "\(calories/7) kcal/day"
+        self.images = []
+        self.price = ""
+    }
 }

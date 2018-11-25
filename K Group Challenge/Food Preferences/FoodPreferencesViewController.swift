@@ -90,12 +90,12 @@ class FoodPreferencesViewController: UIViewController {
     
     @IBAction func finishPressed(_ sender: Any) {
         let preferences = collectPreferences()
-        Network.shared.getRecipes(ranks: preferences, dietType: .normal).done { [weak self] in
+        Network.shared.getRecipes(ranks: preferences, dietType: .normal).done {[weak self] newDiets in
             print("done")
+            diets = newDiets
             self?.performSegue(withIdentifier: "showNext", sender: nil)
         }
     }
-    
 }
 
 extension FoodPreferencesViewController: UICollectionViewDelegate, UICollectionViewDataSource {

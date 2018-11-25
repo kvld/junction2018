@@ -29,7 +29,7 @@ final class DietTableViewCell: UITableViewCell {
 
         self.priceLabel.text = viewModel.price
         self.caloriesLabel.text = viewModel.calories
-        self.imagesView.set(images: viewModel.images)
+        self.imagesView.set(images: viewModel.imagePaths)
         
         
 //        for ingredient in viewModel.ingredients {
