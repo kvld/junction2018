@@ -15,6 +15,7 @@ class CharacteristicsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         kcalLabel.text = "\(appDelegate.tte) kcal"
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
     @IBAction func buttonPressed(_ sender: Any) {

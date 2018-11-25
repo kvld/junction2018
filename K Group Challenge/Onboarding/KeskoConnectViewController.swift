@@ -11,6 +11,11 @@ import UIKit
 class KeskoConnectViewController: UIViewController {
     @IBOutlet weak var button: UIButton!
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        UIApplication.shared.statusBarStyle = .lightContent
+    }
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }
