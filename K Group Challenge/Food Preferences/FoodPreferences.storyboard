@@ -18,40 +18,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-UP-5Mu">
-                                <rect key="frame" x="0.0" y="31" width="375" height="550"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="31" width="375" height="576"/>
+                                <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewLayout key="collectionViewLayout" id="PGs-vS-75y" customClass="CenteredCollectionViewFlowLayout" customModule="CenteredCollectionView"/>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hl4-2u-bVQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-sd-mc5">
-                                <rect key="frame" x="67.5" y="597" width="240" height="50"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyY-sd-mc5">
+                                <rect key="frame" x="16" y="623" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.61960784310000006" green="0.6705882353" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="4OS-GN-MpC"/>
-                                    <constraint firstAttribute="width" constant="240" id="ktC-uV-gcW"/>
+                                    <constraint firstAttribute="height" constant="40" id="4OS-GN-MpC"/>
                                 </constraints>
-                                <state key="normal" title="Finish"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Finish" backgroundImage="gradient"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="finishPressed:" destination="jrT-tG-S7X" eventType="touchUpInside" id="pSI-AU-cvt"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98039215686274506" green="0.98431372549019602" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dyY-sd-mc5" firstAttribute="top" secondItem="B2r-UP-5Mu" secondAttribute="bottom" constant="16" id="UVJ-JH-u7N"/>
                             <constraint firstItem="B2r-UP-5Mu" firstAttribute="leading" secondItem="4F0-wM-N3B" secondAttribute="leading" id="YUU-Ec-EjO"/>
+                            <constraint firstItem="4F0-wM-N3B" firstAttribute="trailing" secondItem="dyY-sd-mc5" secondAttribute="trailing" constant="16" id="dgw-mR-Cj4"/>
                             <constraint firstItem="dyY-sd-mc5" firstAttribute="centerX" secondItem="4F0-wM-N3B" secondAttribute="centerX" id="f6k-rr-kb8"/>
                             <constraint firstItem="B2r-UP-5Mu" firstAttribute="top" secondItem="4F0-wM-N3B" secondAttribute="top" constant="11" id="i7r-R9-FKI"/>
                             <constraint firstItem="4F0-wM-N3B" firstAttribute="trailing" secondItem="B2r-UP-5Mu" secondAttribute="trailing" id="meb-eI-jQG"/>
-                            <constraint firstItem="4F0-wM-N3B" firstAttribute="bottom" secondItem="dyY-sd-mc5" secondAttribute="bottom" constant="20" id="wFz-w1-wEM"/>
+                            <constraint firstItem="4F0-wM-N3B" firstAttribute="bottom" secondItem="dyY-sd-mc5" secondAttribute="bottom" constant="4" id="wFz-w1-wEM"/>
+                            <constraint firstItem="dyY-sd-mc5" firstAttribute="leading" secondItem="4F0-wM-N3B" secondAttribute="leading" constant="16" id="yeJ-AI-QNg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4F0-wM-N3B"/>
                     </view>
@@ -73,4 +73,7 @@
             <point key="canvasLocation" x="1156" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gradient" width="375" height="118"/>
+    </resources>
 </document>

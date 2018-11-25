@@ -393,9 +393,9 @@ internal class Flow {
 
 open class Palette {
     
-    var viewBackgroundColor: UIColor = UIColor(red: 0.000, green: 0.000, blue: 0.000, alpha: 1.000)
-    var sliderBackgroundColor: UIColor = UIColor(red: 0.185, green: 0.184, blue: 0.184, alpha: 1.000)
-    var sliderColor: UIColor = UIColor(red: 0.147, green: 0.000, blue: 0.697, alpha: 1.000)
+    var viewBackgroundColor: UIColor = .clear
+    var sliderBackgroundColor: UIColor = UIColor(red: 208/255, green: 217/255, blue: 229/255, alpha: 1.000)
+    var sliderColor: UIColor = UIColor(red: 147/255, green: 154/255, blue: 245/255, alpha: 1.000)
     
     public init(viewBackgroundColor: UIColor? = nil, sliderBackgroundColor: UIColor? = nil, sliderColor: UIColor? = nil) {
         

@@ -9,13 +9,12 @@
 import UIKit
 
 struct DietViewModel {
-//    struct Ingredient {
-//        let title: String
-//        let quantity: String
-//    }
+    struct Recipe {
+        let title: String
+        let image: UIImage
+    }
 
-    let images: [UIImage]
-//    let ingredients: [Ingredient]
+    let recipes: [Recipe]
 
     let calories: String
     let price: String

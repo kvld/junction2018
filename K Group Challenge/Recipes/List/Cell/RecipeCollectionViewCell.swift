@@ -11,6 +11,12 @@ import UIKit
 class RecipeCollectionViewCell: UICollectionViewCell {
     static let reuseID = String(describing: self)
 
+    private static let shadowColor = UIColor.black.cgColor
+    private static let shadowOffset = CGSize(width: 0, height: 2)
+    private static let shadowOpacity: Float = 0.04
+    private static let shadowRadius: CGFloat = 18.0
+
+    @IBOutlet private weak var containerView: UIView!
     @IBOutlet private weak var stackView: UIStackView!
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
@@ -26,9 +32,47 @@ class RecipeCollectionViewCell: UICollectionViewCell {
     private var descriptionCircle: CircularProgressBar!
     private var carbohydratesCircle: CircularProgressBar!
 
+    private var shadowLayer: CAShapeLayer?
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.contentView.clipsToBounds = true
+
+        self.contentView.clipsToBounds = false
+        self.containerView.backgroundColor = .clear
+        if shadowLayer == nil {
+            dropShadow()
+        }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+
+        DispatchQueue.main.async {
+            CATransaction.setDisableActions(true)
+            self.shadowLayer?.shadowPath = UIBezierPath(
+                roundedRect: self.containerView.bounds,
+                cornerRadius: 4
+                ).cgPath
+            self.shadowLayer?.frame = self.containerView.bounds
+            CATransaction.setDisableActions(false)
+        }
+    }
+
+    private func dropShadow() {
+        let shadowLayer = CAShapeLayer()
+        shadowLayer.backgroundColor = UIColor.white.cgColor
+        shadowLayer.masksToBounds = false
+        shadowLayer.cornerRadius = 4.0
+
+        shadowLayer.shouldRasterize = true
+        shadowLayer.rasterizationScale = UIScreen.main.scale
+        shadowLayer.shadowColor = RecipeCollectionViewCell.shadowColor
+        shadowLayer.shadowOffset = RecipeCollectionViewCell.shadowOffset
+        shadowLayer.shadowOpacity = RecipeCollectionViewCell.shadowOpacity
+        shadowLayer.shadowRadius = RecipeCollectionViewCell.shadowRadius
+        containerView.layer.insertSublayer(shadowLayer, at: 0)
+
+        self.shadowLayer = shadowLayer
     }
 
     func configure(with viewModel: RecipeViewModel) {
