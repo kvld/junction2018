@@ -9,30 +9,26 @@
 import UIKit
 
 struct DietViewModel {
-//    struct Ingredient {
-//        let title: String
-//        let quantity: String
-//    }
+    struct Recipe {
+        let title: String
+        let imagePath: String
+    }
 
-    let images: [UIImage]
-//    let ingredients: [Ingredient]
-
+    var recipes: [Recipe] = []
     let calories: String
     let price: String
-    var imagePaths: [String] = []
     
     init(diet: WeekMenu) {
         var calories = 0
         for day in 0 ..< 7 {
             for recipe in diet.recipesForDay[day]! {
-                if imagePaths.count < 5 {
-                    imagePaths += [recipe.imageURL]
+                if recipes.count < 5 {
+                    recipes += [Recipe(title: recipe.title, imagePath: recipe.imageURL)]
                 }
                 calories += recipe.kcal
             }
         }
         self.calories = "\(calories/7) kcal/day"
-        self.images = []
         self.price = ""
     }
 }

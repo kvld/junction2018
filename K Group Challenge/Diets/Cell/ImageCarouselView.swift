@@ -29,6 +29,24 @@ final class ImageCarouselView: UIView {
         pageControl.currentPageIndicatorTintColor = UIColor(red: 155.0/255, green: 143.0/255, blue: 246.0/255, alpha: 1.0)
         return pageControl
     }()
+
+    private var titles: [String] = []
+
+    private lazy var dimView: UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor.black.withAlphaComponent(0.20)
+        view.isUserInteractionEnabled = false
+        view.layer.cornerRadius = 4.0
+        view.clipsToBounds = true
+        return view
+    }()
+
+    private lazy var titleLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 16, weight: .medium)
+        return label
+    }()
     
     var currentImageIndex: Int {
         if self.scrollView.bounds.size.width == 0 {
@@ -84,14 +102,34 @@ final class ImageCarouselView: UIView {
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         pageControl.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        
+
+        addSubview(dimView)
+        dimView.translatesAutoresizingMaskIntoConstraints = false
+        dimView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        dimView.centerYAnchor.constraint(equalTo: stackView.centerYAnchor).isActive = true
+        dimView.widthAnchor.constraint(equalTo: self.widthAnchor).isActive = true
+        dimView.heightAnchor.constraint(equalTo: stackView.heightAnchor).isActive = true
+
+        addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -16).isActive = true
+        titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16).isActive = true
+        titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16).isActive = true
+
         scrollView.delegate = self
     }
 
-    func set(images: [UIImage]) {
-        pageControl.numberOfPages = images.count
+    func set(data: [DietViewModel.Recipe]) {
+        self.titles = data.map { $0.title }
+
+        for image in stackView.arrangedSubviews {
+            image.removeFromSuperview()
+            stackView.removeArrangedSubview(image)
+        }
+
+        pageControl.numberOfPages = data.count
         pageControl.currentPage = 0
-        for image in images {
+        for image in data {
             let imageView = UIImageView()
             stackView.addArrangedSubview(imageView)
             imageView.translatesAutoresizingMaskIntoConstraints = false
@@ -102,28 +140,8 @@ final class ImageCarouselView: UIView {
                 equalTo: self.heightAnchor
             ).isActive = true
 
-            imageView.image = image
-            imageView.contentMode = .scaleAspectFill
-        }
-    }
-    
-    func set(images: [String]) {
-        pageControl.numberOfPages = images.count
-        pageControl.currentPage = 0
-        for image in images {
-            let imageView = UIImageView()
-            stackView.addArrangedSubview(imageView)
-            imageView.translatesAutoresizingMaskIntoConstraints = false
-            imageView.widthAnchor.constraint(
-                equalTo: self.widthAnchor
-                ).isActive = true
-            imageView.heightAnchor.constraint(
-                equalTo: self.heightAnchor
-                ).isActive = true
-            
-            
             Nuke.loadImage(
-                with: URL(string: image)!,
+                with: URL(string: image.imagePath)!,
                 options: ImageLoadingOptions(
                     transition: ImageLoadingOptions.Transition.fadeIn(
                         duration: 0.1
@@ -133,11 +151,42 @@ final class ImageCarouselView: UIView {
             )
             imageView.contentMode = .scaleAspectFill
         }
+
+        titleLabel.text = titles[currentImageIndex]
     }
+    
+//    func set(images: [String]) {
+//        pageControl.numberOfPages = images.count
+//        pageControl.currentPage = 0
+//        for image in images {
+//            let imageView = UIImageView()
+//            stackView.addArrangedSubview(imageView)
+//            imageView.translatesAutoresizingMaskIntoConstraints = false
+//            imageView.widthAnchor.constraint(
+//                equalTo: self.widthAnchor
+//                ).isActive = true
+//            imageView.heightAnchor.constraint(
+//                equalTo: self.heightAnchor
+//                ).isActive = true
+//            
+//            
+//            Nuke.loadImage(
+//                with: URL(string: image)!,
+//                options: ImageLoadingOptions(
+//                    transition: ImageLoadingOptions.Transition.fadeIn(
+//                        duration: 0.1
+//                    )
+//                ),
+//                into: imageView
+//            )
+//            imageView.contentMode = .scaleAspectFill
+//        }
+//    }
 }
 
 extension ImageCarouselView: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         pageControl.currentPage = currentImageIndex
+        titleLabel.text = titles[currentImageIndex]
     }
 }
