@@ -19,13 +19,7 @@ final class DietsListViewController: UIViewController {
         self.title = "Diets"
 
         self.navigationController?.setNavigationBarHidden(false, animated: true)
-        self.navigationController?.navigationBar.prefersLargeTitles = false
         UIApplication.shared.statusBarStyle = .lightContent
-    }
-
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     override func viewDidLoad() {

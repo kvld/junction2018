@@ -13,6 +13,8 @@ struct RecipeViewModel {
     let imageURL: String
     let title: String
     let summary: String
+    let instruction: String
+    let ingredients: String
     
     let calories: String
     let carbohydrates: String
@@ -32,10 +34,13 @@ struct RecipeViewModel {
         self.carbohydrates = "\(recipe.carbohydrate)"
         self.fats = "\(recipe.fat)"
         self.proteins = "\(recipe.protein)"
+        self.instruction = "\(recipe.instruction)"
         
         self.caloriesPercent = Float(recipe.kcal)/Float(dayCalories)
         self.carbohydratesPercent = Float(recipe.carbohydrate)/Float(dayCarbohydrates)
         self.fatsPercent = Float(recipe.fat)/Float(dayFats)
         self.proteinsPercent = Float(recipe.protein)/Float(dayProteins)
+
+        self.ingredients = "\(recipe.ingredients)"
     }
 }

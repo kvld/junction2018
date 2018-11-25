@@ -18,11 +18,6 @@ final class DetailRecipeViewController: UIViewController {
     @IBOutlet var ingridientsList: UILabel!
     @IBOutlet var instruction: UILabel!
 
-    @IBOutlet var caloriesLabel: UILabel!
-    @IBOutlet var proteinsLabel: UILabel!
-    @IBOutlet var fatsLabel: UILabel!
-    @IBOutlet var carbohydratesLabel: UILabel!
-
     func configure(with viewModel: RecipeViewModel) {
         loadViewIfNeeded()
         Nuke.loadImage(
@@ -36,11 +31,8 @@ final class DetailRecipeViewController: UIViewController {
         )
         title = viewModel.title
         titleLabel.text = viewModel.title
-        instruction.text = viewModel.summary
-        self.caloriesLabel.text = viewModel.calories
-        self.proteinsLabel.text = viewModel.proteins
-        self.fatsLabel.text = viewModel.fats
-        self.carbohydratesLabel.text = viewModel.carbohydrates
+        ingridientsList.text = viewModel.ingredients
+        instruction.text = viewModel.instruction
         print(viewModel)
     }
 }
