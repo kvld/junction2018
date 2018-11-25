@@ -19,6 +19,12 @@
 		08A3606221A9B20600005692 /* AlamofireSwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A3606121A9B20600005692 /* AlamofireSwiftyJSON.swift */; };
 		08A3606421AA366300005692 /* DietsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A3606321AA366300005692 /* DietsInfo.swift */; };
 		365DCA5221A9DF6D0017D6F3 /* HKDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5121A9DF6D0017D6F3 /* HKDataViewController.swift */; };
+		365DCA5721AA422E0017D6F3 /* PriceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5621AA422E0017D6F3 /* PriceListViewController.swift */; };
+		365DCA5921AA42E70017D6F3 /* PullUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5821AA42E70017D6F3 /* PullUpController.swift */; };
+		365DCA5E21AA43360017D6F3 /* PriceList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 365DCA5A21AA43350017D6F3 /* PriceList.storyboard */; };
+		365DCA5F21AA43360017D6F3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5B21AA43350017D6F3 /* MapViewController.swift */; };
+		365DCA6021AA43360017D6F3 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5C21AA43350017D6F3 /* SearchViewController.swift */; };
+		365DCA6121AA43360017D6F3 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365DCA5D21AA43350017D6F3 /* SearchResultCell.swift */; };
 		36B44A8421A9615F002D25EF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B44A8321A9615F002D25EF /* HealthKit.framework */; };
 		36B44A8621A96398002D25EF /* HealthKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8521A96398002D25EF /* HealthKitService.swift */; };
 		36B44A8821A96EB4002D25EF /* TotalEnergyIntakeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B44A8721A96EB4002D25EF /* TotalEnergyIntakeService.swift */; };
@@ -56,6 +62,12 @@
 		08A3606121A9B20600005692 /* AlamofireSwiftyJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireSwiftyJSON.swift; sourceTree = "<group>"; };
 		08A3606321AA366300005692 /* DietsInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DietsInfo.swift; sourceTree = "<group>"; };
 		365DCA5121A9DF6D0017D6F3 /* HKDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKDataViewController.swift; sourceTree = "<group>"; };
+		365DCA5621AA422E0017D6F3 /* PriceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceListViewController.swift; sourceTree = "<group>"; };
+		365DCA5821AA42E70017D6F3 /* PullUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpController.swift; sourceTree = "<group>"; };
+		365DCA5A21AA43350017D6F3 /* PriceList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = PriceList.storyboard; sourceTree = "<group>"; };
+		365DCA5B21AA43350017D6F3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		365DCA5C21AA43350017D6F3 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		365DCA5D21AA43350017D6F3 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		36B44A8221A9615F002D25EF /* K Group Challenge.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "K Group Challenge.entitlements"; sourceTree = "<group>"; };
 		36B44A8321A9615F002D25EF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		36B44A8521A96398002D25EF /* HealthKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitService.swift; sourceTree = "<group>"; };
@@ -139,6 +151,19 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		365DCA5321AA41EE0017D6F3 /* Price List */ = {
+			isa = PBXGroup;
+			children = (
+				365DCA5A21AA43350017D6F3 /* PriceList.storyboard */,
+				365DCA5B21AA43350017D6F3 /* MapViewController.swift */,
+				365DCA5D21AA43350017D6F3 /* SearchResultCell.swift */,
+				365DCA5C21AA43350017D6F3 /* SearchViewController.swift */,
+				365DCA5621AA422E0017D6F3 /* PriceListViewController.swift */,
+				365DCA5821AA42E70017D6F3 /* PullUpController.swift */,
+			);
+			path = "Price List";
+			sourceTree = "<group>";
+		};
 		36B44A8921A99DD1002D25EF /* Health Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +214,7 @@
 		8652328D21A8570700F9D73A /* K Group Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				365DCA5321AA41EE0017D6F3 /* Price List */,
 				08A3605E21A9B06900005692 /* Network */,
 				860AFD2321A974EB00F7D84C /* Recipes */,
 				082D4D8221A97004003890D5 /* Food Preferences */,
@@ -326,6 +352,7 @@
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
 				8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */,
 				860AFD2521A974F500F7D84C /* Recipes.storyboard in Resources */,
+				365DCA5E21AA43360017D6F3 /* PriceList.storyboard in Resources */,
 				8652329921A8570900F9D73A /* LaunchScreen.storyboard in Resources */,
 				8652329621A8570900F9D73A /* Assets.xcassets in Resources */,
 				8652329421A8570700F9D73A /* Onboarding.storyboard in Resources */,
@@ -396,7 +423,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365DCA5F21AA43360017D6F3 /* MapViewController.swift in Sources */,
 				86F0686021A99DCC00E99ADE /* DetailRecipeViewController.swift in Sources */,
+				365DCA5721AA422E0017D6F3 /* PriceListViewController.swift in Sources */,
 				365DCA5221A9DF6D0017D6F3 /* HKDataViewController.swift in Sources */,
 				86F0685721A985BC00E99ADE /* RecipesViewController.swift in Sources */,
 				86F0685921A994ED00E99ADE /* RecipeViewModel.swift in Sources */,
@@ -405,10 +434,12 @@
 				8635EC9321A9550E00918B42 /* DietsListViewController.swift in Sources */,
 				08A3606421AA366300005692 /* DietsInfo.swift in Sources */,
 				8652329121A8570700F9D73A /* ViewController.swift in Sources */,
+				365DCA6021AA43360017D6F3 /* SearchViewController.swift in Sources */,
 				86F0685421A9858D00E99ADE /* RecipeCollectionViewCell.swift in Sources */,
 				8652328F21A8570700F9D73A /* AppDelegate.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
 				86E4E08821AA185C007BE6AD /* CircularProgressBar.swift in Sources */,
+				365DCA5921AA42E70017D6F3 /* PullUpController.swift in Sources */,
 				08A3606021A9B07C00005692 /* Network.swift in Sources */,
 				082D4D8721A9866E003890D5 /* FoodItemCollectionViewCell.swift in Sources */,
 				868251BF21A9698100AE8E82 /* ImageCarouselView.swift in Sources */,
@@ -424,6 +455,7 @@
 				0846CB6A21A9935D001BE035 /* SectionSlider.swift in Sources */,
 				081CAD7E21A93DFE0029F52F /* HealthKitViewController.swift in Sources */,
 				868251B821A9565A00AE8E82 /* DietTableViewCell.swift in Sources */,
+				365DCA6121AA43360017D6F3 /* SearchResultCell.swift in Sources */,
 				36B44A8621A96398002D25EF /* HealthKitService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
