@@ -21,7 +21,9 @@ final class RecipesViewController: UIViewController {
     private let daysTitles = ["25", "26", "27", "28", "29", "30", "1"]
 
     private var viewModels: [RecipeViewModel] = []
-
+    var menu: WeekMenu?
+    var currentDay = 0
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -34,51 +36,68 @@ final class RecipesViewController: UIViewController {
 
         self.setupCollectionView()
         self.setupDaysSwitch()
-
+        
+        self.refreshViewModels()
+        
         // Mock
-        self.viewModels = [
-            RecipeViewModel(
-                image: UIImage(named: "recipe1")!,
-                title: "Recipe title 1",
-                summary: "Summary summary summary summary",
-                calories: "1000",
-                carbohydrates: "32.1",
-                fats: "7.1",
-                proteins: "16.7",
-                caloriesPercent: 0.5,
-                carbohydratesPercent: 0.5,
-                fatsPercent: 0.5,
-                proteinsPercent: 0.5
-            ),
-            RecipeViewModel(
-                image: UIImage(named: "recipe2")!,
-                title: "Recipe title 2",
-                summary: "Summary summary summary summary",
-                calories: "1000",
-                carbohydrates: "32.1",
-                fats: "7.1",
-                proteins: "16.7",
-                caloriesPercent: 0.5,
-                carbohydratesPercent: 0.5,
-                fatsPercent: 0.5,
-                proteinsPercent: 0.5
-            ),
-            RecipeViewModel(
-                image: UIImage(named: "recipe3")!,
-                title: "Recipe title",
-                summary: "Summary summary summary summary",
-                calories: "1000",
-                carbohydrates: "32.1",
-                fats: "7.1",
-                proteins: "16.7",
-                caloriesPercent: 0.5,
-                carbohydratesPercent: 0.5,
-                fatsPercent: 0.5,
-                proteinsPercent: 0.5
-            )
-        ]
+//        self.viewModels = [
+//            RecipeViewModel(
+//                image: UIImage(named: "recipe1")!,
+//                title: "Recipe title 1",
+//                summary: "Summary summary summary summary",
+//                calories: "1000",
+//                carbohydrates: "32.1",
+//                fats: "7.1",
+//                proteins: "16.7",
+//                caloriesPercent: 0.5,
+//                carbohydratesPercent: 0.5,
+//                fatsPercent: 0.5,
+//                proteinsPercent: 0.5
+//            ),
+//            RecipeViewModel(
+//                image: UIImage(named: "recipe2")!,
+//                title: "Recipe title 2",
+//                summary: "Summary summary summary summary",
+//                calories: "1000",
+//                carbohydrates: "32.1",
+//                fats: "7.1",
+//                proteins: "16.7",
+//                caloriesPercent: 0.5,
+//                carbohydratesPercent: 0.5,
+//                fatsPercent: 0.5,
+//                proteinsPercent: 0.5
+//            ),
+//            RecipeViewModel(
+//                image: UIImage(named: "recipe3")!,
+//                title: "Recipe title",
+//                summary: "Summary summary summary summary",
+//                calories: "1000",
+//                carbohydrates: "32.1",
+//                fats: "7.1",
+//                proteins: "16.7",
+//                caloriesPercent: 0.5,
+//                carbohydratesPercent: 0.5,
+//                fatsPercent: 0.5,
+//                proteinsPercent: 0.5
+//            )
+//        ]
     }
 
+    func refreshViewModels() {
+        var calories = 0
+        var fats = 0
+        var carbohydrates = 0
+        var proteins = 0
+        for recipe in (menu?.recipesForDay[currentDay] ?? []) {
+            calories += recipe.kcal
+            fats += recipe.fat
+            carbohydrates += recipe.carbohydrate
+            proteins += recipe.protein
+        }
+
+        self.viewModels = menu?.recipesForDay[currentDay]?.map { RecipeViewModel(recipe: $0, dayCalories: calories, dayCarbohydrates: carbohydrates, dayFats: fats, dayProteins: proteins) } ?? []
+    }
+    
     private func setupCollectionView() {
         self.centeredCollectionViewFlowLayout = (collectionView.collectionViewLayout
             as! CenteredCollectionViewFlowLayout)
@@ -129,7 +148,7 @@ final class RecipesViewController: UIViewController {
 
     @objc
     private func selectDay(_ sender: UIButton) {
-        for view in self.weekStackView.arrangedSubviews {
+        for (index, view) in self.weekStackView.arrangedSubviews.enumerated() {
             for subview in view.subviews {
                 if let subview = subview as? UIImageView {
                     subview.isHidden = view !== sender
@@ -137,9 +156,15 @@ final class RecipesViewController: UIViewController {
                         view === sender ? .white : UIColor(red: 158/255, green: 171/255, blue: 190/255, alpha: 1.0),
                         for: .normal
                     )
+                    if view === sender {
+                        currentDay = index
+                        refreshViewModels()
+                        collectionView.reloadData()
+                    }
                 }
             }
         }
+        
     }
 }
 

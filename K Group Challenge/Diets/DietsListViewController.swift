@@ -107,7 +107,8 @@ extension DietsListViewController: UITableViewDelegate {
         let storyboard = UIStoryboard(name: "Recipes", bundle: nil)
         let vc = storyboard.instantiateViewController(
             withIdentifier: "RecipesViewController"
-        )
+        ) as! RecipesViewController
+        vc.menu = diets!.menus[indexPath.row]
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

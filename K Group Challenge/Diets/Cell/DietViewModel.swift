@@ -21,7 +21,10 @@ struct DietViewModel {
     init(diet: WeekMenu) {
         var calories = 0
         for day in 0 ..< 7 {
-            for recipe in diet.recipesForDay[day]! {
+            guard let recipesForDay = diet.recipesForDay[day] else {
+                continue
+            }
+            for recipe in recipesForDay {
                 if recipes.count < 5 {
                     recipes += [Recipe(title: recipe.title, imagePath: recipe.imageURL)]
                 }

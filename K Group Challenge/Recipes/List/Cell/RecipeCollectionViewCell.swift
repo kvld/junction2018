@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 class RecipeCollectionViewCell: UICollectionViewCell {
     static let reuseID = String(describing: self)
@@ -77,7 +78,16 @@ class RecipeCollectionViewCell: UICollectionViewCell {
 
     func configure(with viewModel: RecipeViewModel) {
         self.titleLabel.text = viewModel.title
-        self.imageView.image = viewModel.image
+        Nuke.loadImage(
+            with: URL(string: viewModel.imageURL)!,
+            options: ImageLoadingOptions(
+                transition: ImageLoadingOptions.Transition.fadeIn(
+                    duration: 0.1
+                )
+            ),
+            into: imageView
+        )
+
         self.descriptionLabel.text = viewModel.summary
 
         self.caloriesLabel.text = viewModel.calories

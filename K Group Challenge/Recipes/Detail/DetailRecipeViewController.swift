@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Nuke
 
 final class DetailRecipeViewController: UIViewController {
 
@@ -24,7 +25,15 @@ final class DetailRecipeViewController: UIViewController {
 
     func configure(with viewModel: RecipeViewModel) {
         loadViewIfNeeded()
-        imageView.image = viewModel.image
+        Nuke.loadImage(
+            with: URL(string: viewModel.imageURL)!,
+            options: ImageLoadingOptions(
+                transition: ImageLoadingOptions.Transition.fadeIn(
+                    duration: 0.1
+                )
+            ),
+            into: imageView
+        )
         title = viewModel.title
         titleLabel.text = viewModel.title
         instruction.text = viewModel.summary
