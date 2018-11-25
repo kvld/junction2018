@@ -10,9 +10,10 @@ import UIKit
 import CenteredCollectionView
 
 final class RecipesViewController: UIViewController {
-    private static let cellPercentWidth: CGFloat = 0.7
+    private static let cellPercentWidth: CGFloat = 0.91
 
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var weekTitleStackView: UIStackView!
     @IBOutlet private weak var weekStackView: UIStackView!
 
     private var centeredCollectionViewFlowLayout: CenteredCollectionViewFlowLayout!
@@ -40,28 +41,40 @@ final class RecipesViewController: UIViewController {
                 image: UIImage(named: "recipe1")!,
                 title: "Recipe title 1",
                 summary: "Summary summary summary summary",
-                calories: "1000\nkcal",
-                carbohydrates: "32.1\ncarbohydrates",
-                fats: "7.1\nfats",
-                proteins: "16.7\nproteins"
+                calories: "1000",
+                carbohydrates: "32.1",
+                fats: "7.1",
+                proteins: "16.7",
+                caloriesPercent: 0.5,
+                carbohydratesPercent: 0.5,
+                fatsPercent: 0.5,
+                proteinsPercent: 0.5
             ),
             RecipeViewModel(
                 image: UIImage(named: "recipe2")!,
                 title: "Recipe title 2",
                 summary: "Summary summary summary summary",
-                calories: "1000\nkcal",
-                carbohydrates: "32.1\ncarbohydrates",
-                fats: "7.1\nfats",
-                proteins: "16.7\nproteins"
+                calories: "1000",
+                carbohydrates: "32.1",
+                fats: "7.1",
+                proteins: "16.7",
+                caloriesPercent: 0.5,
+                carbohydratesPercent: 0.5,
+                fatsPercent: 0.5,
+                proteinsPercent: 0.5
             ),
             RecipeViewModel(
                 image: UIImage(named: "recipe3")!,
                 title: "Recipe title",
                 summary: "Summary summary summary summary",
-                calories: "1000\nkcal",
-                carbohydrates: "32.1\ncarbohydrates",
-                fats: "7.1\nfats",
-                proteins: "16.7\nproteins"
+                calories: "1000",
+                carbohydrates: "32.1",
+                fats: "7.1",
+                proteins: "16.7",
+                caloriesPercent: 0.5,
+                carbohydratesPercent: 0.5,
+                fatsPercent: 0.5,
+                proteinsPercent: 0.5
             )
         ]
     }
@@ -83,9 +96,9 @@ final class RecipesViewController: UIViewController {
             height: collectionView.bounds.height
         )
 
-        self.centeredCollectionViewFlowLayout.sectionInset = .zero
+        self.collectionView.contentInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         self.centeredCollectionViewFlowLayout.minimumInteritemSpacing = 0
-        self.centeredCollectionViewFlowLayout.minimumLineSpacing = 20
+        self.centeredCollectionViewFlowLayout.minimumLineSpacing = 8
     }
 
     private func setupDaysSwitch() {
